@@ -2,7 +2,6 @@
 name: email-tasks
 description: Read and triage the user's Gmail inbox using Gmail automation tools. Pulls emails from a recent window (e.g. past 8 hours), filters out notifications/receipts/newsletters, and presents a list of emails requiring action or reply. Use when the user runs /email-tasks, asks to check their emails, or wants a summary of pending email tasks.
 ---
-
 # Email Tasks (`email-tasks`)
 
 Triage your Gmail inbox to identify high-priority messages that require immediate replies, decisions, or action.

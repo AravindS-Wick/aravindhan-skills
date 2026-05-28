@@ -2,7 +2,6 @@
 name: work-on
 description: Start working on a Jira ticket by gathering context (ticket details, branches, PRs) and offering actions. Use when the user runs /work-on, asks to work on a ticket, or wants Jira ticket context and branch/PR info.
 ---
-
 # Work On
 
 Start working on a Jira ticket by gathering all relevant context (ticket details, related branches, recent PRs) before taking action.

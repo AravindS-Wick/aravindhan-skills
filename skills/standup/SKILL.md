@@ -2,7 +2,6 @@
 name: standup
 description: Generate sprint summary for team standups with state changes and stagnant tickets. Use when the user runs /standup, asks for a standup report, or wants sprint summary for a JIRA board.
 ---
-
 # Standup
 
 Generate sprint summary for team standups with focus on state changes and stagnant tickets.

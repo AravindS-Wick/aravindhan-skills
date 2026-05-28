@@ -2,7 +2,6 @@
 name: sms-review
 description: Pre-push code review for SMS and SmsBulk changes. Checks feature flag wrapping, exposed/debug code, React bad practices, dangerous linter disabling, DRY violations, and MCDS CSS compliance. Scoped to web/js/src/Main/Sms and web/js/src/Main/SmsBulk. Use before pushing or creating a PR for any SMS-related frontend changes, or whenever the user says "review my SMS changes", "check my SMS code", or asks if their SMS/SmsBulk changes are ready to push.
 ---
-
 # SMS Code Review — Pre-Push Gate
 
 Scoped to: `web/js/src/Main/Sms/**` and `web/js/src/Main/SmsBulk/**`

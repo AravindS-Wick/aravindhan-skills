@@ -3,7 +3,6 @@ name: codeowners
 description: Look up CODEOWNERS information and use batch/owners. Use when the user asks who owns a file, which team to ping, what Slack channel to use for a file or feature, what reviewers to add to a PR, or for any batch/owners command (show, summarize, export report, change, sort, check).
 disable-model-invocation: true
 ---
-
 # Codeowners and `batch/owners`
 
 When the user asks for ownership information or for anything related to CODEOWNERS/capabilities, use **`batch/owners`** in the app container. This skill documents what the CLI provides and how to run it.

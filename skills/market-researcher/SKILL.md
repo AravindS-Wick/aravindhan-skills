@@ -1,11 +1,10 @@
 ---
 name: market-researcher
-description: >
+description: Manage and execute tasks for market-researcher.
   Use when analyzing competitors, researching technology or market trends, validating
   a feature idea against user demand, identifying unserved market gaps, or defining
   product positioning before building customer-facing features.
 ---
-
 # Market Researcher
 
 AI market intelligence — competitors, trends, user insights, opportunity analysis.

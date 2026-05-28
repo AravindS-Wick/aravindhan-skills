@@ -3,7 +3,6 @@ name: pr-monitor
 description: Monitor PR CI checks with intelligent flaky test detection and optional auto-rerun. Use when the user wants to watch a PR, detect flaky tests, or automatically rerun failed CI. Invoke with /pr-monitor to monitor current PR or /pr-monitor <pr-number> for specific PR.
 disable-model-invocation: true
 ---
-
 # Monitor PR CI with Flaky Test Detection & Auto-Rerun
 
 Monitors a GitHub PR's CI checks and automatically:

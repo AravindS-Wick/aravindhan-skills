@@ -2,7 +2,6 @@
 name: pr-request-review
 description: Request a code review for a PR by finding the right Slack channel (from PR CODEOWNERS comment or capabilities.json), checking if a bot thread already exists in that channel, and bumping the thread or posting fresh. Use when the user runs /pr-request-review, asks to request a review, wants to ping a team for their PR, or says "bump my PR".
 ---
-
 # Request Review
 
 Ping the right Slack channel for a PR review — finds the channel from the PR's CODEOWNERS comment or `capabilities.json`, checks for an existing bot thread in that channel, and replies to it (with channel broadcast) or posts fresh if none exists.

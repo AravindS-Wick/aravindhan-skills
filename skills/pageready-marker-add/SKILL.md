@@ -2,7 +2,6 @@
 name: pageready-marker-add
 description: Place the markPageReadyEnd() performance marker at the "content ready" point in a React component — i.e. after data has loaded and meaningful content is rendered, not on first paint/mount. Use when the user asks to add a PageReady marker, review an existing markPageReadyEnd placement, or ensure a marker fires at content-ready rather than shell-ready.
 ---
-
 # PageReady Marker: Place at Content Ready
 
 ## Overview

@@ -2,7 +2,6 @@
 name: instagram-downloader
 description: Download high-resolution images, carousels, or reels from Instagram URLs using the agent-browser CLI. Stitches carousel slides into a single PDF if requested. Use when the user runs /instagram-downloader or asks to download/extract media from an Instagram URL.
 ---
-
 # Instagram Downloader (`instagram-downloader`)
 
 Downloads high-resolution images, carousels, or reels from Instagram URLs using `agent-browser`.

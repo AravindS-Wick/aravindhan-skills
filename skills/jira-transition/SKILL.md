@@ -1,6 +1,6 @@
 ---
 name: jira-transition
-description: >
+description: Manage and execute tasks for jira-transition.
   Transition a Jira issue to any target status (e.g. "In Progress", "Closed", "Blocked").
   Use this skill whenever the user asks to move, transition, update the status of, or mark a
   Jira ticket as something — "move XP-1234 to In Progress", "close AORG-5678", "mark this
@@ -9,7 +9,6 @@ description: >
   Handles Jira's quirky workflow validators by discovering required screen fields upfront,
   assigns the ticket to the current user, and posts a comment confirming the transition.
 ---
-
 # Jira Transition Skill
 
 Transition a Jira issue to a target status reliably — including Jira projects that have

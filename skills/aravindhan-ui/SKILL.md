@@ -1,13 +1,12 @@
 ---
 name: aravindhan-ui
-description: >
+description: Manage and execute tasks for aravindhan-ui.
   Full project brain for @aravi1008/ui design system and all related repos
   (monorepo, storybook, framework packages). Use this skill whenever the user
   mentions @aravi1008/ui, aravindhan-ui, av- components, the design system,
   or any of the related packages. Loads complete architecture, decisions,
   roadmap, and coding rules so you NEVER start fresh.
 ---
-
 # @aravi1008/ui — Full Project Brain
 
 > This skill is the single source of truth for the entire @aravi1008/ui ecosystem.

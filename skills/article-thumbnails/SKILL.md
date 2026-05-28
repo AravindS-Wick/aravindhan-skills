@@ -2,7 +2,6 @@
 name: article-thumbnails
 description: Generate article and newsletter thumbnail candidates using the Gemini API. Analyzes article copy, constructs image prompts matching brand specs, calls the model, and evaluates candidates. Use when the user runs /article-thumbnails, asks to create a newsletter/article thumbnail, or wants image candidates for an article.
 ---
-
 # Article Thumbnails (`article-thumbnails`)
 
 Generates and evaluates brand-appropriate thumbnail candidates for articles or newsletters using Gemini models.

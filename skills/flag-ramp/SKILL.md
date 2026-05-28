@@ -3,7 +3,6 @@ name: flag-ramp
 description: Change an existing feature flag's percentage rollout. Use when the user asks to ramp a flag, change rollout percentage, or update enabled/enabled_e2e.
 disable-model-invocation: true
 ---
-
 # Flag ramp
 
 ## Overview

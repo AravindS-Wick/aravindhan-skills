@@ -2,7 +2,6 @@
 name: autolyse-convert
 description: Convert a Controller action to an Autolyse gRPC service. Use when the user asks to convert a controller to Autolyse, create a gRPC service, or migrate an action to Autolyse.
 ---
-
 # Autolyse convert to service
 
 ## Overview

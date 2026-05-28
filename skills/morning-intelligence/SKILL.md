@@ -2,7 +2,6 @@
 name: morning-intelligence
 description: Generate a personalized daily morning briefing based on your professional role, focus areas, and preferred news sources. Use when the user runs /morning-intelligence, asks for their daily brief, or sets up a scheduled briefing routine.
 ---
-
 # Morning Intelligence (`morning-intelligence`)
 
 Generates a customized, high-signal morning briefing tailored to your role and focus areas by reading news, trends, and release updates.

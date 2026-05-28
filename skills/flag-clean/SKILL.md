@@ -2,7 +2,6 @@
 name: flag-clean
 description: Clean flag references from code and make behavior permanent. Use when the user asks to clean a feature flag from code, remove flag checks, or make flag behavior permanent.
 ---
-
 # Flag clean
 
 ## Overview

@@ -2,7 +2,6 @@
 name: pr-review-triage
 description: Monitor a Slack channel for new PR review requests, perform code reviews scoped to team-owned files, post findings to Slack threads, and approve or comment. Requires --channel, --team, and --repo arguments. Designed to run on /loop.
 ---
-
 # PR Review Triage
 
 ## Overview

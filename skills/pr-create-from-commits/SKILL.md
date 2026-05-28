@@ -2,7 +2,6 @@
 name: pr-create-from-commits
 description: Create a PR from recent commits with Jira status and template. Use when the user asks to create a PR, open a pull request, or run pr-create-from-commits.
 ---
-
 # Pull Request Create
 
 ## Overview

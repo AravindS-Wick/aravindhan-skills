@@ -2,7 +2,6 @@
 name: pr-list-by-author
 description: Lists open GitHub pull requests filtered by a user-supplied list of author logins and review state (not draft, not fully approved). Supports per-repo gh pr list or cross-repo gh search prs plus optional reviewDecision post-check, and optional posting to a Slack channel or canvas. Use when the user runs /pr-list-by-author, asks for a daily PR queue, PRs waiting on review, team triage, or sharing that list to Slack across named repos or all visible repos on GitHub Enterprise or GitHub.com.
 ---
-
 # PR list by author (awaiting merge / not fully approved)
 
 ## Overview

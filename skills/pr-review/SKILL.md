@@ -2,7 +2,6 @@
 name: pr-review
 description: Review a PR with code analysis, security checks, and optional Playwright test discovery. Use when the user runs /pr-review, asks to review a PR or their changes, says "look at this PR", "check my diff", "review before I push", or wants feedback on code changes. Fetches PR via gh pr view; offers Playwright test check/create when running locally with Playwright repo.
 ---
-
 # PR Review: Code Review + Playwright Test Discovery
 
 ## Overview

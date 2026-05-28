@@ -1,11 +1,10 @@
 ---
 name: orchestrate
-description: >
+description: Manage and execute tasks for orchestrate.
   Use when starting a sprint, planning a full feature end-to-end, running pre-release
   checks, doing weekly or monthly reviews, or building a new component — automatically
   routes to and coordinates the correct skills for each development phase.
 ---
-
 # Orchestrate — Command Center
 
 Routes to the right skills automatically. One command, correct team assembled.

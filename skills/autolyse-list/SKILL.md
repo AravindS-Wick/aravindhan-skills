@@ -1,12 +1,11 @@
 ---
 name: autolyse-list
-description: >-
+description: Manage and execute tasks for autolyse-list.
   List all registered Autolyse (gRPC/Twirp) endpoints in the Mailchimp
   monolith in alphabetical order. Use when the engineer asks to list, find,
   browse, or discover Autolyse services, endpoints, or gRPC routes.
 disable-model-invocation: true
 ---
-
 # List Autolyse Endpoints
 
 Display all registered Autolyse service endpoints from the monolith, sorted alphabetically.

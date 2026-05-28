@@ -1,11 +1,10 @@
 ---
 name: lite-superpowers
-description: >
+description: Manage and execute tasks for lite-superpowers.
   Use when analyzing code quality, suggesting refactors, optimizing performance, generating
   boilerplate, reviewing implementation details, or explaining complex code sections —
   without loading the full superpowers plugin or forcing Opus 4.6.
 ---
-
 # Lite Superpowers
 
 Token-optimized code intelligence. Replaces `superpowers@claude-plugins-official` for code tasks — 75–85% fewer tokens, no forced Opus 4.6.

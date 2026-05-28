@@ -1,11 +1,10 @@
 ---
 name: marketing-strategist
-description: >
+description: Manage and execute tasks for marketing-strategist.
   Use when planning a product launch, building go-to-market strategy, writing positioning
   statements, creating launch week checklists, drafting email drip sequences, or building
   a content calendar for developer-focused products.
 ---
-
 # Marketing Strategist
 
 AI marketing lead — GTM strategy, messaging, positioning, launch campaigns.
