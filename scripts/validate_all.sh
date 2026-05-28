@@ -59,7 +59,7 @@ for skill_dir in "$SKILLS_SRC"/*/; do
   fi
 
   # Best-effort YAML validity
-  if command -v python3 >/dev/null 2>&1; then
+  if python3 -c "import yaml" >/dev/null 2>&1; then
     python3 -c "
 import sys, yaml
 try:

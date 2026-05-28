@@ -66,7 +66,7 @@ echo "🔍 Scanning $SRC for SKILL.md files..."
 while IFS= read -r -d '' skill_md; do
   skill_dir="$(dirname "$skill_md")"
   found_skills+=("$skill_dir")
-done < <(find "$SRC" -type f -name 'SKILL.md' -print0)
+done < <(find "$SRC" -type f -iname 'SKILL.md' -print0)
 
 if [[ ${#found_skills[@]} -eq 0 ]]; then
   echo "ℹ️  no SKILL.md files found under $SRC"
@@ -84,6 +84,25 @@ for src_skill in "${found_skills[@]}"; do
   name="$(basename "$src_skill")"
   dest="$DEST_ROOT/$name"
 
+  if [[ "$name" == "skills" ]]; then
+    continue
+  fi
+
+  has_desc=0
+  if [[ -f "$src_skill/SKILL.md" ]]; then
+    if grep -q "^description:" "$src_skill/SKILL.md"; then
+      has_desc=1
+    fi
+  elif [[ -f "$src_skill/skill.md" ]]; then
+    if grep -q "^description:" "$src_skill/skill.md"; then
+      has_desc=1
+    fi
+  fi
+
+  if [[ $has_desc -eq 0 ]]; then
+    continue
+  fi
+
   if [[ -e "$dest" ]]; then
     echo "⏭️  $name — already in repo, skipping (rename to import again)"
     skipped+=("$name")
@@ -96,6 +115,9 @@ for src_skill in "${found_skills[@]}"; do
   fi
 
   cp -r "$src_skill" "$dest"
+  if [[ -f "$dest/skill.md" ]]; then
+    mv "$dest/skill.md" "$dest/SKILL.md"
+  fi
   imported+=("$name")
 
   # Scan for org-specific patterns
