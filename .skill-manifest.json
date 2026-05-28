@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-28T08:57:53Z",
+  "updated": "2026-05-28T09:06:04Z",
   "target": "/Users/aravindhan/.claude/skills",
   "skills": {
     "a11y": {
@@ -109,6 +109,10 @@
     "code-review": {
       "path": "skills/code-review",
       "description": "\"Review code changes for correctness, security, performance, and code quality. Use when the user asks to review a diff, review code changes, review commits, or perform a code review. Input can be: (1) a text diff pasted directly, (2) one or more git commit hashes to extract the diff from, or (3) a git range like abc123..def456. The user may also provide task description or requirements that motivated the change.\""
+    },
+    "code-simplifier": {
+      "path": "skills/code-simplifier",
+      "description": "Takes recently modified or complex code blocks and refactors them for readability and simplicity without changing behavioral logic. Use when refactoring complex logic, cleaning up nested conditions, or simplifying code structure."
     },
     "codeowners": {
       "path": "skills/codeowners",
@@ -246,6 +250,10 @@
       "path": "skills/global-tester",
       "description": "Manage and execute tasks for global-tester."
     },
+    "grill-me": {
+      "path": "skills/grill-me",
+      "description": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get grilled on their design, or mentions \"grill me\"."
+    },
     "grill-with-docs": {
       "path": "skills/grill-with-docs",
       "description": "Forces grounding using live documentation (Redis, Postgres, external API docs, frameworks) fetched via curl or web search before generating integration code or database schemas."
@@ -341,6 +349,10 @@
     "plan": {
       "path": "skills/plan",
       "description": "\"Planning agent for task breakdown and implementation planning. Use via spawn_subagent with skill='plan' when you need to explore a codebase and design an implementation approach before writing code.\""
+    },
+    "planetscale": {
+      "path": "skills/planetscale",
+      "description": "Database schema branching, indexing, N+1 query prevention, query plans, and safe online migrations for MySQL/PostgreSQL databases. Use when working on database schemas, migrations, or query optimization."
     },
     "playwright": {
       "path": "skills/playwright",
@@ -454,6 +466,10 @@
       "path": "skills/sms-review",
       "description": "Pre-push code review for SMS and SmsBulk changes. Checks feature flag wrapping, exposed/debug code, React bad practices, dangerous linter disabling, DRY violations, and MCDS CSS compliance. Scoped to web/js/src/Main/Sms and web/js/src/Main/SmsBulk. Use before pushing or creating a PR for any SMS-related frontend changes, or whenever the user says \"review my SMS changes\", \"check my SMS code\", or asks if their SMS/SmsBulk changes are ready to push."
     },
+    "spartan-ai-toolkit": {
+      "path": "skills/spartan-ai-toolkit",
+      "description": "Enforces quality gates (typecheck -> lint -> test -> build) and stack profiles (React, TypeScript, Go, Python) to prevent agent code degradation. Use when running build check, lint check, typecheck, or init rules."
+    },
     "sprint-commander": {
       "path": "skills/sprint-commander",
       "description": "Manage and execute tasks for sprint-commander."
@@ -482,9 +498,21 @@
       "path": "skills/template-skill",
       "description": "Replace with description of the skill and when Claude should use it."
     },
+    "terrashark": {
+      "path": "skills/terrashark",
+      "description": "\"Prevent Terraform/OpenTofu hallucinations by diagnosing and fixing failure modes: identity churn, secret exposure, blast-radius mistakes, CI drift, and compliance gate gaps. Use when generating, reviewing, refactoring, or migrating IaC and when building delivery/testing pipelines.\""
+    },
     "theme-factory": {
       "path": "skills/theme-factory",
       "description": "\"This skill provides a curated collection of professional font and color themes themes, each with carefully selected color palettes and font pairings. Once a theme is chosen, it can be applied to any artifact.\""
+    },
+    "to-issues": {
+      "path": "skills/to-issues",
+      "description": "Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices. Use when user wants to convert a plan into issues, create implementation tickets, or break down work into issues."
+    },
+    "to-prd": {
+      "path": "skills/to-prd",
+      "description": "Turn the current conversation context into a PRD and publish it to the project issue tracker. Use when user wants to create a PRD from the current context."
     },
     "ui-ux-pro-max": {
       "path": "skills/ui-ux-pro-max",
