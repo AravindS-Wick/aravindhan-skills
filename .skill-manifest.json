@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-28T08:41:09Z",
+  "updated": "2026-05-28T08:44:53Z",
   "target": "/Users/aravindhan/.claude/skills",
   "skills": {
     "a11y": {
@@ -10,9 +10,21 @@
       "path": "skills/aeo-optimization",
       "description": "Rewrite drafts or articles to optimize them for Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO). Rewrites H2 headings into explicit questions, inserts a 50-80 word answer capsule immediately under each, and ensures the content is optimized for AI extraction. Use when the user asks to AEO-optimize content, run /aeo-optimize, or prepare an article for AI citation."
     },
+    "agent-development": {
+      "path": "skills/agent-development",
+      "description": "This skill should be used when the user asks to \"create an agent\", \"add an agent\", \"write a subagent\", \"agent frontmatter\", \"when to use description\", \"agent examples\", \"agent tools\", \"agent colors\", \"autonomous agent\", or needs guidance on agent structure, system prompts, triggering conditions, or agent development best practices for Claude Code plugins."
+    },
+    "algorithmic-art": {
+      "path": "skills/algorithmic-art",
+      "description": "\"Algorithmic philosophies are computational aesthetic movements that are then expressed through code. Output .md files (philosophy), .html files (interactive viewer), and .js files (generative algorithms).\""
+    },
+    "aravindhan-ui-execution": {
+      "path": "skills/aravindhan-ui-execution",
+      "description": "Execution plan and roadmap tracker for the @aravi1008/ui design system."
+    },
     "aravindhan-ui": {
       "path": "skills/aravindhan-ui",
-      "description": ">"
+      "description": "Manage and execute tasks for aravindhan-ui."
     },
     "article-thumbnails": {
       "path": "skills/article-thumbnails",
@@ -20,7 +32,7 @@
     },
     "autodoc": {
       "path": "skills/autodoc",
-      "description": ">"
+      "description": "Manage and execute tasks for autodoc."
     },
     "autolyse-convert": {
       "path": "skills/autolyse-convert",
@@ -28,15 +40,71 @@
     },
     "autolyse-list": {
       "path": "skills/autolyse-list",
-      "description": ">-"
+      "description": "Manage and execute tasks for autolyse-list."
     },
     "biz-analyst": {
       "path": "skills/biz-analyst",
-      "description": ">"
+      "description": "Manage and execute tasks for biz-analyst."
+    },
+    "brand-guidelines": {
+      "path": "skills/brand-guidelines",
+      "description": "Write copy following Sentry brand guidelines. Use when writing UI text, error messages, empty states, onboarding flows, 404 pages, documentation, marketing copy, or any user-facing content. Covers both Plain Speech (default) and Sentry Voice tones."
+    },
+    "canvas-design": {
+      "path": "skills/canvas-design",
+      "description": "\"These are instructions for creating design philosophies - aesthetic movements that are then EXPRESSED VISUALLY. Output only .md files, .pdf files, and .png files.\""
+    },
+    "ckm-banner-design": {
+      "path": "skills/ckm-banner-design",
+      "description": "\"Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with AI-generated visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, website hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage. Uses ui-ux-pro-max, frontend-design, ai-artist, ai-multimodal skills.\""
+    },
+    "ckm-brand": {
+      "path": "skills/ckm-brand",
+      "description": "Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides."
+    },
+    "ckm-design-system": {
+      "path": "skills/ckm-design-system",
+      "description": "Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations."
+    },
+    "ckm-design": {
+      "path": "skills/ckm-design",
+      "description": "\"Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), social photos (HTML→screenshot, multi-platform). Actions: design logo, create CIP, generate mockups, build slides, design banner, generate icon, create social photos, social media images, brand identity, design system. Platforms: Facebook, Twitter, LinkedIn, YouTube, Instagram, Pinterest, TikTok, Threads, Google Ads.\""
+    },
+    "ckm-slides": {
+      "path": "skills/ckm-slides",
+      "description": "Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies."
+    },
+    "ckm-ui-styling": {
+      "path": "skills/ckm-ui-styling",
+      "description": "Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components (dialogs, dropdowns, forms, tables), customizing themes and colors, implementing dark mode, generating visual designs and posters, or establishing consistent styling patterns across applications."
+    },
+    "claude-api": {
+      "path": "skills/claude-api",
+      "description": "\"Build apps with the Claude API or Anthropic SDK. TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`/`claude_agent_sdk`, or user asks to use Claude API, Anthropic SDKs, or Agent SDK. DO NOT TRIGGER when: code imports `openai`/other AI SDK, general programming, or ML/data-science tasks.\""
+    },
+    "claude-opus-4-5-migration": {
+      "path": "skills/claude-opus-4-5-migration",
+      "description": "Migrate prompts and code from Claude Sonnet 4.0, Sonnet 4.5, or Opus 4.1 to Opus 4.5. Use when the user wants to update their codebase, prompts, or API calls to use Opus 4.5. Handles model string updates and prompt adjustments for known Opus 4.5 behavioral differences. Does NOT migrate Haiku 4.5."
+    },
+    "code-review": {
+      "path": "skills/code-review",
+      "description": "\"Review code changes for correctness, security, performance, and code quality. Use when the user asks to review a diff, review code changes, review commits, or perform a code review. Input can be: (1) a text diff pasted directly, (2) one or more git commit hashes to extract the diff from, or (3) a git range like abc123..def456. The user may also provide task description or requirements that motivated the change.\""
     },
     "codeowners": {
       "path": "skills/codeowners",
       "description": "Look up CODEOWNERS information and use batch/owners. Use when the user asks who owns a file, which team to ping, what Slack channel to use for a file or feature, what reviewers to add to a PR, or for any batch/owners command (show, summarize, export report, change, sort, check)."
+    },
+    "command-development": {
+      "path": "skills/command-development",
+      "description": "This skill should be used when the user asks to \"create a slash command\", \"add a command\", \"write a custom command\", \"define command arguments\", \"use command frontmatter\", \"organize commands\", \"create command with file references\", \"interactive command\", \"use AskUserQuestion in command\", or needs guidance on slash command structure, YAML frontmatter fields, dynamic arguments, bash execution in commands, user interaction patterns, or command development best practices for Claude Code."
+    },
+    "composio": {
+      "path": "skills/composio",
+      "description": "Use 1000+ external apps via Composio - either directly through the CLI or by building AI agents and apps with the SDK"
+    },
+    "comprehensive-review": {
+      "path": "skills/comprehensive-review",
+      "description": "\"Comprehensive code review using parallel specialized subagents. If a PR URL is provided, fetches PR details and can post comments. If no PR is provided, reviews the diff between the current branch and its base branch plus any uncommitted changes. CRITICAL: this skill is costly, don't use it unless user explicitly requested to use it.\""
     },
     "context-mode": {
       "path": "skills/context-mode",
@@ -46,17 +114,69 @@
       "path": "skills/create-global-ipd-attribute",
       "description": "Create a new IPD (In-Product Discovery) attribute provider hook for targeting in the Recommendations widget. Use when the user wants to add new attributes to IPD, add targeting data to the recommendations widget, create a new useIPDAttributes provider, or mentions IPD attributes."
     },
+    "cross-review": {
+      "path": "skills/cross-review",
+      "description": "\"Cross review code using a subagent with a specified model. Use when the user asks to review code changes AND specifies a model to use (e.g., 'review with opus', 'use sonnet to review', 'review changes with gemini'). The key differentiator from the regular code-review skill is that the user explicitly specifies which model should perform the review. The root agent reconstructs what changed from its own conversation history — no git commands are used.\""
+    },
+    "deploy-to-vercel": {
+      "path": "skills/deploy-to-vercel",
+      "description": "Deploy applications and websites to Vercel. Use when the user requests deployment actions like \"deploy my app\", \"deploy and give me the link\", \"push this live\", or \"create a preview deployment\"."
+    },
     "dev-account-create": {
       "path": "skills/dev-account-create",
       "description": "Create a new internal, experimental dev user account in the local Mailchimp dev environment. Automatically marks the account as internal and experimental (Optimizely). Asks for marketing plan, manual activation, feature flags, and account link interactively one at a time. Use when the user says \"create a dev account\", \"create a test user\", \"spin up a dev user\", or runs /dev-account-create."
     },
     "dev-assistant": {
       "path": "skills/dev-assistant",
-      "description": ">"
+      "description": "Manage and execute tasks for dev-assistant."
+    },
+    "doc-coauthoring": {
+      "path": "skills/doc-coauthoring",
+      "description": "\"This skill provides a structured workflow for guiding users through collaborative document creation. Act as an active guide, walking users through three stages: Context Gathering, Refinement & Structure, and Reader Testing.\""
+    },
+    "docx": {
+      "path": "skills/docx",
+      "description": "\"A user may ask you to create, edit, or analyze the contents of a .docx file. A .docx file is essentially a ZIP archive containing XML files and other resources that you can read or edit. You have different tools and workflows available for different tasks.\""
     },
     "email-tasks": {
       "path": "skills/email-tasks",
       "description": "Read and triage the user's Gmail inbox using Gmail automation tools. Pulls emails from a recent window (e.g. past 8 hours), filters out notifications/receipts/newsletters, and presents a list of emails requiring action or reply. Use when the user runs /email-tasks, asks to check their emails, or wants a summary of pending email tasks."
+    },
+    "find-skills": {
+      "path": "skills/find-skills",
+      "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill."
+    },
+    "firecrawl-agent": {
+      "path": "skills/firecrawl-agent",
+      "description": "Manage and execute tasks for firecrawl-agent."
+    },
+    "firecrawl-browser": {
+      "path": "skills/firecrawl-browser",
+      "description": "Manage and execute tasks for firecrawl-browser."
+    },
+    "firecrawl-crawl": {
+      "path": "skills/firecrawl-crawl",
+      "description": "Manage and execute tasks for firecrawl-crawl."
+    },
+    "firecrawl-download": {
+      "path": "skills/firecrawl-download",
+      "description": "Manage and execute tasks for firecrawl-download."
+    },
+    "firecrawl-map": {
+      "path": "skills/firecrawl-map",
+      "description": "Manage and execute tasks for firecrawl-map."
+    },
+    "firecrawl-scrape": {
+      "path": "skills/firecrawl-scrape",
+      "description": "Manage and execute tasks for firecrawl-scrape."
+    },
+    "firecrawl-search": {
+      "path": "skills/firecrawl-search",
+      "description": "Manage and execute tasks for firecrawl-search."
+    },
+    "firecrawl": {
+      "path": "skills/firecrawl",
+      "description": "Manage and execute tasks for firecrawl."
     },
     "flag-clean": {
       "path": "skills/flag-clean",
@@ -74,41 +194,69 @@
       "path": "skills/flag-ramp",
       "description": "Change an existing feature flag's percentage rollout. Use when the user asks to ramp a flag, change rollout percentage, or update enabled/enabled_e2e."
     },
+    "frontend-design": {
+      "path": "skills/frontend-design",
+      "description": "\"You are a frontend designer-engineer, not a layout generator.\""
+    },
     "generate-mc-trx-email": {
       "path": "skills/generate-mc-trx-email",
       "description": "Generate a new Mailchimp transactional email template set (HTML, txt, metadata). Use when the user asks to generate a transactional email, create an email template, or add a trx email."
     },
     "global-security": {
       "path": "skills/global-security",
-      "description": ">"
+      "description": "Manage and execute tasks for global-security."
     },
     "global-tester": {
       "path": "skills/global-tester",
-      "description": ">"
+      "description": "Manage and execute tasks for global-tester."
+    },
+    "hook-development": {
+      "path": "skills/hook-development",
+      "description": "This skill should be used when the user asks to \"create a hook\", \"add a PreToolUse/PostToolUse/Stop hook\", \"validate tool use\", \"implement prompt-based hooks\", \"use ${CLAUDE_PLUGIN_ROOT}\", \"set up event-driven automation\", \"block dangerous commands\", or mentions hook events (PreToolUse, PostToolUse, Stop, SubagentStop, SessionStart, SessionEnd, UserPromptSubmit, PreCompact, Notification). Provides comprehensive guidance for creating and implementing Claude Code plugin hooks with focus on advanced prompt-based hooks API."
+    },
+    "init": {
+      "path": "skills/init",
+      "description": "\"Use when the user asks to initialize a repo, create AGENTS.md, generate contributor guidelines, or set up agent-oriented documentation for a codebase.\""
     },
     "instagram-downloader": {
       "path": "skills/instagram-downloader",
       "description": "Download high-resolution images, carousels, or reels from Instagram URLs using the agent-browser CLI. Stitches carousel slides into a single PDF if requested. Use when the user runs /instagram-downloader or asks to download/extract media from an Instagram URL."
     },
+    "internal-comms": {
+      "path": "skills/internal-comms",
+      "description": "\"Write internal communications such as status reports, leadership updates, 3P updates, newsletters, FAQs, incident reports, and project updates using repeatable internal formats.\""
+    },
     "jira-transition": {
       "path": "skills/jira-transition",
-      "description": ">"
+      "description": "Manage and execute tasks for jira-transition."
     },
     "last30days": {
       "path": "skills/last30days",
       "description": "Search Reddit, X (Twitter), and the web for any topic, tool, or trend over the past 30 days and aggregate a report on user consensus, disagreements, and common pain points. Use when the user runs /last30days, asks for recent opinions on a tool or trend, or wants to check what people are saying about a topic lately."
     },
+    "legal-docs-generator": {
+      "path": "skills/legal-docs-generator",
+      "description": "Generate Privacy Policies, Terms of Service, and other legal documents with 7-level verification."
+    },
     "lite-superpowers": {
       "path": "skills/lite-superpowers",
-      "description": ">"
+      "description": "Manage and execute tasks for lite-superpowers."
     },
     "market-researcher": {
       "path": "skills/market-researcher",
-      "description": ">"
+      "description": "Manage and execute tasks for market-researcher."
     },
     "marketing-strategist": {
       "path": "skills/marketing-strategist",
-      "description": ">"
+      "description": "Manage and execute tasks for marketing-strategist."
+    },
+    "mcp-builder": {
+      "path": "skills/mcp-builder",
+      "description": "\"Create MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. The quality of an MCP server is measured by how well it enables LLMs to accomplish real-world tasks.\""
+    },
+    "mcp-integration": {
+      "path": "skills/mcp-integration",
+      "description": "This skill should be used when the user asks to \"add MCP server\", \"integrate MCP\", \"configure MCP in plugin\", \"use .mcp.json\", \"set up Model Context Protocol\", \"connect external service\", mentions \"${CLAUDE_PLUGIN_ROOT} with MCP\", or discusses MCP server types (SSE, stdio, HTTP, WebSocket). Provides comprehensive guidance for integrating Model Context Protocol servers into Claude Code plugins for external tool and service integration."
     },
     "merge-all-features": {
       "path": "skills/merge-all-features",
@@ -132,15 +280,39 @@
     },
     "orchestrate": {
       "path": "skills/orchestrate",
-      "description": ">"
+      "description": "Manage and execute tasks for orchestrate."
     },
     "pageready-marker-add": {
       "path": "skills/pageready-marker-add",
       "description": "Place the markPageReadyEnd() performance marker at the \"content ready\" point in a React component — i.e. after data has loaded and meaningful content is rendered, not on first paint/mount. Use when the user asks to add a PageReady marker, review an existing markPageReadyEnd placement, or ensure a marker fires at content-ready rather than shell-ready."
     },
+    "pdf": {
+      "path": "skills/pdf",
+      "description": "\"This guide covers essential PDF processing operations using Python libraries and command-line tools. For advanced features, JavaScript libraries, and detailed examples, see reference.md. If you need to fill out a PDF form, read forms.md and follow its instructions.\""
+    },
+    "plan": {
+      "path": "skills/plan",
+      "description": "\"Planning agent for task breakdown and implementation planning. Use via spawn_subagent with skill='plan' when you need to explore a codebase and design an implementation approach before writing code.\""
+    },
+    "playwright": {
+      "path": "skills/playwright",
+      "description": "\"Browser automation with Playwright. Use when the user asks to test a website, take screenshots, check responsive design, test login flows, fill forms, check broken links, or automate any browser task.\""
+    },
+    "plugin-settings": {
+      "path": "skills/plugin-settings",
+      "description": "This skill should be used when the user asks about \"plugin settings\", \"store plugin configuration\", \"user-configurable plugin\", \".local.md files\", \"plugin state files\", \"read YAML frontmatter\", \"per-project plugin settings\", or wants to make plugin behavior configurable. Documents the .claude/plugin-name.local.md pattern for storing plugin-specific configuration with YAML frontmatter and markdown content."
+    },
+    "plugin-structure": {
+      "path": "skills/plugin-structure",
+      "description": "This skill should be used when the user asks to \"create a plugin\", \"scaffold a plugin\", \"understand plugin structure\", \"organize plugin components\", \"set up plugin.json\", \"use ${CLAUDE_PLUGIN_ROOT}\", \"add commands/agents/skills/hooks\", \"configure auto-discovery\", or needs guidance on plugin directory layout, manifest configuration, component organization, file naming conventions, or Claude Code plugin architecture best practices."
+    },
     "po-guide": {
       "path": "skills/po-guide",
-      "description": ">"
+      "description": "Manage and execute tasks for po-guide."
+    },
+    "pptx": {
+      "path": "skills/pptx",
+      "description": "\"A user may ask you to create, edit, or analyze the contents of a .pptx file. A .pptx file is essentially a ZIP archive containing XML files and other resources that you can read or edit. You have different tools and workflows available for different tasks.\""
     },
     "pr-create-from-commits": {
       "path": "skills/pr-create-from-commits",
@@ -172,11 +344,15 @@
     },
     "product-designer": {
       "path": "skills/product-designer",
-      "description": ">"
+      "description": "Manage and execute tasks for product-designer."
     },
     "qa-automation": {
       "path": "skills/qa-automation",
-      "description": ">"
+      "description": "Manage and execute tasks for qa-automation."
+    },
+    "research": {
+      "path": "skills/research",
+      "description": "\"Fast agent specialized for exploring codebases and searching for code patterns. Use via spawn_subagent with skill='research' for read-only exploration tasks.\""
     },
     "security-cmdexe": {
       "path": "skills/security-cmdexe",
@@ -198,9 +374,25 @@
       "path": "skills/security-xss",
       "description": "Apply XSS protection to Avesta views (app/views/) and React views (web/js/src/). Use when editing views or when end-user HTML must be rendered; follows .agent/rules/security-xss.mdc."
     },
+    "shannon": {
+      "path": "skills/shannon",
+      "description": "\"Autonomous AI pentester for web apps and APIs. Run white-box security assessments with Shannon — analyzes source code, identifies attack vectors, and executes real exploits to prove vulnerabilities. Triggered by 'shannon', 'pentest', 'security audit', 'vuln scan'.\""
+    },
+    "skill-creator": {
+      "path": "skills/skill-creator",
+      "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations."
+    },
+    "skill-development": {
+      "path": "skills/skill-development",
+      "description": "This skill should be used when the user wants to \"create a skill\", \"add a skill to plugin\", \"write a new skill\", \"improve skill description\", \"organize skill content\", or needs guidance on skill structure, progressive disclosure, or skill development best practices for Claude Code plugins."
+    },
     "skills-router": {
       "path": "skills/skills-router",
-      "description": ">"
+      "description": "Manage and execute tasks for skills-router."
+    },
+    "slack-gif-creator": {
+      "path": "skills/slack-gif-creator",
+      "description": "\"A toolkit providing utilities and knowledge for creating animated GIFs optimized for Slack.\""
     },
     "sms-review": {
       "path": "skills/sms-review",
@@ -208,7 +400,7 @@
     },
     "sprint-commander": {
       "path": "skills/sprint-commander",
-      "description": ">"
+      "description": "Manage and execute tasks for sprint-commander."
     },
     "standup": {
       "path": "skills/standup",
@@ -226,6 +418,42 @@
       "path": "skills/sycophancy-buster",
       "description": "Disable default sycophantic agreement and challenge the user's assumptions. Argues the strongest case against the user's proposal, highlights blind spots, and refuses to agree unless presented with strong evidence. Use when the user runs /sycophancy-buster or /criticize, asks for critical feedback on an idea, or wants a devil's advocate review."
     },
+    "template-skill": {
+      "path": "skills/template-skill",
+      "description": "Replace with description of the skill and when Claude should use it."
+    },
+    "theme-factory": {
+      "path": "skills/theme-factory",
+      "description": "\"This skill provides a curated collection of professional font and color themes themes, each with carefully selected color palettes and font pairings. Once a theme is chosen, it can be applied to any artifact.\""
+    },
+    "ui-ux-pro-max": {
+      "path": "skills/ui-ux-pro-max",
+      "description": "\"Comprehensive design guide for web and mobile applications. Use when designing new UI components or pages, choosing color palettes and typography, or reviewing code for UX issues.\""
+    },
+    "vercel-composition-patterns": {
+      "path": "skills/vercel-composition-patterns",
+      "description": "Vercel composition and routing design patterns for high-performance frontend applications."
+    },
+    "vercel-react-best-practices": {
+      "path": "skills/vercel-react-best-practices",
+      "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements."
+    },
+    "vercel-react-native-skills": {
+      "path": "skills/vercel-react-native-skills",
+      "description": "React Native and Expo deployment patterns on Vercel."
+    },
+    "web-artifacts-builder": {
+      "path": "skills/web-artifacts-builder",
+      "description": "\"To build powerful frontend claude.ai artifacts, follow these steps:\""
+    },
+    "web-design-guidelines": {
+      "path": "skills/web-design-guidelines",
+      "description": "\"Review files for compliance with Web Interface Guidelines.\""
+    },
+    "webapp-testing": {
+      "path": "skills/webapp-testing",
+      "description": "\"To test local web applications, write native Python Playwright scripts.\""
+    },
     "weekly-performance-regression-report": {
       "path": "skills/weekly-performance-regression-report",
       "description": "Generate a weekly regression report for the Mailchimp monolith by querying Bugsnag (SmartBear MCP) for new errors and correlating them with recent releases and GitHub commits. Use when the user asks to check for performance degradation, find regressions, generate a weekly error report, or investigate what broke recently."
@@ -233,6 +461,14 @@
     "work-on": {
       "path": "skills/work-on",
       "description": "Start working on a Jira ticket by gathering context (ticket details, branches, PRs) and offering actions. Use when the user runs /work-on, asks to work on a ticket, or wants Jira ticket context and branch/PR info."
+    },
+    "writing-hookify-rules": {
+      "path": "skills/writing-hookify-rules",
+      "description": "This skill should be used when the user asks to \"create a hookify rule\", \"write a hook rule\", \"configure hookify\", \"add a hookify rule\", or needs guidance on hookify rule syntax and patterns."
+    },
+    "xlsx": {
+      "path": "skills/xlsx",
+      "description": "\"Unless otherwise stated by the user or existing template\""
     }
   }
 }

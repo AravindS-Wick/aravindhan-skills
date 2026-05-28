@@ -1,11 +1,10 @@
 ---
 name: qa-automation
-description: >
+description: Manage and execute tasks for qa-automation.
   Use when generating Playwright E2E tests, building test strategy, finding uncovered code paths,
   auditing WCAG 2.1 AA accessibility violations, or creating unit test stubs for web, mobile,
   or API codebases.
 ---
-
 # QA Automation Skill
 
 AI-powered QA engineering — Playwright generation, test strategy, coverage analysis.

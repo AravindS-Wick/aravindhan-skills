@@ -1,11 +1,10 @@
 ---
 name: product-designer
-description: >
+description: Manage and execute tasks for product-designer.
   Use when designing a UI component spec, auditing for WCAG 2.1 AA accessibility
   violations (missing ARIA, contrast, keyboard nav), reviewing design system consistency,
   analyzing user flows, or evaluating design token architecture.
 ---
-
 # Product Designer
 
 AI product designer — UX/UI review, accessibility, component design, design system consistency.

@@ -1,11 +1,10 @@
 ---
 name: sprint-commander
-description: >
+description: Manage and execute tasks for sprint-commander.
   Use when planning a sprint, forecasting velocity based on historical data, running
   retrospectives, identifying long-running PRs or blocked tasks, or mapping task
   dependencies to sequence work across a sprint.
 ---
-
 # Sprint Commander
 
 AI Scrum Master — sprint ceremonies, velocity, blockers, retrospectives.

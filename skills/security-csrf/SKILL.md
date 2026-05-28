@@ -2,7 +2,6 @@
 name: security-csrf
 description: Apply CSRF protection to state-changing controller actions and Autolyse services. Use when generating Mailchimp controllers or registering Autolyse services; follows .agent/rules/security-csrf.mdc.
 ---
-
 # Apply CSRF Protection to all state changing controller actions
 
 ## Class and Function Conventions

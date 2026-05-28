@@ -3,7 +3,6 @@ name: optimizely-create
 description: Create new Mailchimp A/B experiment (Optimizely) with class and registration. Use when the user asks to create an Optimizely experiment, A/B test, or experiment class.
 disable-model-invocation: true
 ---
-
 # Create Optimizely Experiment
 
 Create new Mailchimp A/B experiment with proper class structure and registration. See `.agent/rules/optimizely.mdc` for complete experiment documentation.

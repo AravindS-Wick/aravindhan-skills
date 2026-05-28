@@ -2,7 +2,6 @@
 name: context-mode
 description: Optimize session memory and filter out shell command output clutter. Keeps a running log of the current session state (active files, current tasks, and progress) in the workspace to allow quick recovery and prevent token bloat. Use when the user runs /context-mode or asks to clean up active memory, log the current session state, or reduce session sluggishness.
 ---
-
 # Context Mode (`context-mode`)
 
 Optimizes the agent's context window by filtering out verbose shell output clutter and maintaining a lightweight session state log.

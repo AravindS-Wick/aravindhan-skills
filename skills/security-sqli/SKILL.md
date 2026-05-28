@@ -2,7 +2,6 @@
 name: security-sqli
 description: Apply SQL injection protection using prepared statements for database queries. Use when generating or modifying code that uses exec, query, queryOne, querySql, etc.; follows .agent/rules/security-sqli.mdc.
 ---
-
 # Apply SQL Injection Protection
 All SQL queries in the codebase MUST use prepared statements.
 

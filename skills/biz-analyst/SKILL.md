@@ -1,11 +1,10 @@
 ---
 name: biz-analyst
-description: >
+description: Manage and execute tasks for biz-analyst.
   Use when defining KPIs for a product phase, calculating ROI on time or capital
   investment, measuring business impact of a feature, designing metrics dashboards,
   or forecasting growth over 3–12 months.
 ---
-
 # Business Analyst
 
 AI business analysis — KPIs, ROI, impact measurement, forecasting.

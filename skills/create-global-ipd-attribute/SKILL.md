@@ -2,7 +2,6 @@
 name: create-global-ipd-attribute
 description: Create a new IPD (In-Product Discovery) attribute provider hook for targeting in the Recommendations widget. Use when the user wants to add new attributes to IPD, add targeting data to the recommendations widget, create a new useIPDAttributes provider, or mentions IPD attributes.
 ---
-
 # Add New IPD Attribute Provider
 
 Add a new set of targeting attributes to the IPD (In-Product Discovery) widget by creating a **provider hook**.

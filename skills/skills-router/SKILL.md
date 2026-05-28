@@ -1,11 +1,10 @@
 ---
 name: skills-router
-description: >
+description: Manage and execute tasks for skills-router.
   Use at the start of any development session to silently determine which skill applies —
   reads git context (staged files, changed files, branch) and message keywords, then
   auto-loads the right skill. Never asks the user which skill to use.
 ---
-
 # Skills Router
 
 Automatically determines and loads the right skill based on project context. Zero user input required.

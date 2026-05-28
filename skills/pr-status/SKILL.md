@@ -2,7 +2,6 @@
 name: pr-status
 description: List open PRs for the current repository with merge readiness classification (Ready to merge / Awaiting approval / Blocked), CI status, approval state, conflict detection, and rebase guidance. Use when the user runs /pr-status, asks to see their open PRs, wants to check merge readiness, or asks which PRs need attention.
 ---
-
 # PR Status
 
 Surface an accurate, actionable snapshot of the user's open PRs for the current repository. Classifies each PR by merge readiness based on approval state, CI results, and conflict detection. Recommends rebase where it would help.

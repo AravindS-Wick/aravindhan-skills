@@ -2,7 +2,6 @@
 name: a11y
 description: Review and fix accessibility issues (WCAG 2.2 Level AA). Use when the user asks for an accessibility review, runs /a11y, or wants to fix a11y issues in UI components, forms, or pages.
 ---
-
 # Accessibility Review & Fix
 
 Review and optionally fix accessibility issues. See `.agent/rules/accessibility.mdc` for standards.

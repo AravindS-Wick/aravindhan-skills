@@ -2,7 +2,6 @@
 name: security-cmdexe
 description: Convert PHP exec, shell_exec, system, passthru, or backticks to the ShellBuilder pattern. Use when PHP code contains those builtins; follows .agent/rules/security-cmdexe.mdc.
 ---
-
 # Convert Shell Commands to ShellBuilder
 
 Any PHP code that contains references to the following builtin PHP functions should be converted to use the ShellBuilder pattern instead:

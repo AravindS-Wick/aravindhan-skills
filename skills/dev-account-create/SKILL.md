@@ -2,7 +2,6 @@
 name: dev-account-create
 description: Create a new internal, experimental dev user account in the local Mailchimp dev environment. Automatically marks the account as internal and experimental (Optimizely). Asks for marketing plan, manual activation, feature flags, and account link interactively one at a time. Use when the user says "create a dev account", "create a test user", "spin up a dev user", or runs /dev-account-create.
 ---
-
 # Dev Account Creator (`dev-account-create`)
 
 Creates a new Mailchimp dev account that is pre-configured as internal and experimental, with optional feature flags and billing plan.

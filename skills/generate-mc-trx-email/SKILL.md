@@ -3,7 +3,6 @@ name: generate-mc-trx-email
 description: Generate a new Mailchimp transactional email template set (HTML, txt, metadata). Use when the user asks to generate a transactional email, create an email template, or add a trx email.
 disable-model-invocation: true
 ---
-
 # Generate Mailchimp Transactional Email
 
 ## Overview

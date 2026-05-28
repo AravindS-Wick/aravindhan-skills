@@ -3,7 +3,6 @@ name: weekly-performance-regression-report
 description: Generate a weekly regression report for the Mailchimp monolith by querying Bugsnag (SmartBear MCP) for new errors and correlating them with recent releases and GitHub commits. Use when the user asks to check for performance degradation, find regressions, generate a weekly error report, or investigate what broke recently.
 allowed-tools: mcp__smartbear__bugsnag_list_releases, mcp__smartbear__bugsnag_list_project_errors, mcp__smartbear__bugsnag_get_error, Bash, Write
 ---
-
 # Mailchimp Regression Report Skill
 
 Generate a Markdown regression report for the Mailchimp monolith covering the last 7 days. Cross-reference Bugsnag error data with release history and GitHub commits to surface new regressions and correlate them to likely culprit deploys.

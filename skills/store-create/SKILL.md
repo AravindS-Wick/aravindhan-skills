@@ -2,7 +2,6 @@
 name: store-create
 description: Create one or more dummy ecommerce stores with promo codes in the CWS dev environment. Prompts the user for store type(s), number of promo codes per store, user ID, and list ID, then executes the creation via docker exec into mc-dev-app. Use when the user wants to seed dev data for Shopify, Wix, Square, or WooCommerce stores.
 ---
-
 # Dev Store Creation (`store-create`)
 
 Create dummy ecommerce stores and promo codes in the CWS dev environment for testing SMS promo code flows.

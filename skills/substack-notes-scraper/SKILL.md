@@ -2,7 +2,6 @@
 name: substack-notes-scraper
 description: Scrape Substack Notes metrics for a specific author and time period. Uses agent-browser to load the page, scrolls to fetch all posts, extracts metrics (likes, comments, restacks), and formats them as a structured spreadsheet (.xlsx). Use when the user runs /substack-notes-scraper, asks to scrape/analyze Substack notes, or wants a metrics report on Substack posts.
 ---
-
 # Substack Notes Scraper (`substack-notes-scraper`)
 
 Scrapes author notes from Substack and compiles dates, text, likes, comments, restacks, and links into a structured spreadsheet.

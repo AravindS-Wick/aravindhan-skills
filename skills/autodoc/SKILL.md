@@ -1,6 +1,6 @@
 ---
 name: autodoc
-description: >
+description: Manage and execute tasks for autodoc.
   Generate deep documentation for undocumented or poorly-documented areas of the Mailchimp
   monolith codebase. Use this skill whenever the user asks to document code, understand legacy
   code and write it up, produce a reference doc, create a current-state analysis, or says things
@@ -10,7 +10,6 @@ description: >
   Always use this skill rather than ad-hoc documentation — it produces docs that match this
   repo's conventions and places them correctly in docs/.
 ---
-
 # autodoc
 
 Generate thorough, well-placed documentation for undocumented or legacy code in this codebase.

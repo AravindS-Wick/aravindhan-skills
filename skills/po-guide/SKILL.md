@@ -1,11 +1,10 @@
 ---
 name: po-guide
-description: >
+description: Manage and execute tasks for po-guide.
   Use when writing user stories (As a/I want/So that), creating Given/When/Then acceptance
   criteria, prioritizing backlog with RICE or MoSCoW scoring, predicting sprint risks,
   or translating stakeholder requirements into engineering tasks.
 ---
-
 # Product Owner Guide
 
 AI Product Owner — backlog management, user stories, prioritization, sprint planning.

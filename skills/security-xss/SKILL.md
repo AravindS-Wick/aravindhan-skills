@@ -2,7 +2,6 @@
 name: security-xss
 description: Apply XSS protection to Avesta views (app/views/) and React views (web/js/src/). Use when editing views or when end-user HTML must be rendered; follows .agent/rules/security-xss.mdc.
 ---
-
 # Avesta View XSS Protection
 If you are working on a file under the 'app/views' directory with the 'html' file extension, this is an Avesta view.
 Follow the instructions in this document to ensure HTML entity encoding is applied to prevent XSS vulnerabilities:

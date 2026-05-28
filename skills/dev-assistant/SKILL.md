@@ -1,11 +1,10 @@
 ---
 name: dev-assistant
-description: >
+description: Manage and execute tasks for dev-assistant.
   Use when designing system architecture, choosing design patterns, reviewing API contracts,
   analyzing coupling or over-engineering, or decomposing a complex feature into parallel
   implementation tasks for any language or stack.
 ---
-
 # Senior Dev Assistant
 
 Senior full-stack perspective on architecture, patterns, and engineering decisions.

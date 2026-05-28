@@ -1,11 +1,10 @@
 ---
 name: global-tester
-description: >
+description: Manage and execute tasks for global-tester.
   Use when running tests, checking code quality, scanning for security vulnerabilities, verifying
   builds, or measuring coverage on any codebase. Supports jest, eslint, npm-audit, pytest, vitest,
   stylelint, security-patterns, build, typescript and 20+ other check types via --checks= flag.
 ---
-
 # Global Tester
 
 Universal testing & quality system for any codebase — web, mobile, backend, data, design systems.

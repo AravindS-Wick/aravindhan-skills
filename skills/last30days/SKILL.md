@@ -2,7 +2,6 @@
 name: last30days
 description: Search Reddit, X (Twitter), and the web for any topic, tool, or trend over the past 30 days and aggregate a report on user consensus, disagreements, and common pain points. Use when the user runs /last30days, asks for recent opinions on a tool or trend, or wants to check what people are saying about a topic lately.
 ---
-
 # Last 30 Days (`last30days`)
 
 Search Reddit, X, and the web for any topic, tool, or trend over the past 30 days, compiling user consensus, key debates, and common pain points.

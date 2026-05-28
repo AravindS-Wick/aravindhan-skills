@@ -2,7 +2,6 @@
 name: security-unserialize
 description: Prevent serialization vulnerabilities when using serialize, unserialize, or magic methods. Use when generating or editing PHP code with serialization; follows .agent/rules/security-unserialize.mdc.
 ---
-
 # PHP Serialization Vulnerability Protection
 
 ## PHP Serialization Functions

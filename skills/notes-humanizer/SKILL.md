@@ -2,7 +2,6 @@
 name: notes-humanizer
 description: Humanize AI-generated text or drafts. Strips out machine-writing patterns (e.g. em-dashes, "let's dive in" hooks, rules of three, buzzwords) and adds human writing patterns (varying sentence lengths, personal opinions, specific concrete details, and conversational asides). Use when the user runs /humanize, asks to make text sound like a human wrote it, or wants to rewrite generic AI copy.
 ---
-
 # Notes Humanizer (`notes-humanizer`)
 
 Transforms dry, generic, or formulaic AI-generated drafts into natural, engaging prose that reads like it was written by an experienced human writer.

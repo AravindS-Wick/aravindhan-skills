@@ -2,7 +2,6 @@
 name: notebooklm-connector
 description: Automate NotebookLM actions using the agent-browser CLI. Supports creating notebooks, uploading sources (links, documents), and generating mindmaps or audio summaries. Use when the user runs /notebooklm, asks to automate NotebookLM, or wants to create audio summaries/study guides.
 ---
-
 # NotebookLM Connector (`notebooklm-connector`)
 
 Automates NotebookLM workflows such as creating notebooks, uploading research materials, and trigger output generation (e.g. Audio Summaries, Mindmaps).

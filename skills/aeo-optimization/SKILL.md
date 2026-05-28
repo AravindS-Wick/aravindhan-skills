@@ -2,7 +2,6 @@
 name: aeo-optimization
 description: Rewrite drafts or articles to optimize them for Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO). Rewrites H2 headings into explicit questions, inserts a 50-80 word answer capsule immediately under each, and ensures the content is optimized for AI extraction. Use when the user asks to AEO-optimize content, run /aeo-optimize, or prepare an article for AI citation.
 ---
-
 # AEO Optimization (`aeo-optimization`)
 
 Optimize articles, Substack posts, or blog drafts so that AI search engines (like ChatGPT, Claude, and Perplexity) can cleanly extract and cite your answers.

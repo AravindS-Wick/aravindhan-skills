@@ -1,11 +1,10 @@
 ---
 name: global-security
-description: >
+description: Manage and execute tasks for global-security.
   Use when validating staged changes before a commit or PR — catches linting errors, secrets,
   vulnerable dependencies, security patterns (eval, SQL injection, XSS, hardcoded keys), bad
   branch names, coverage drops, and build failures. Use --checks= for targeted validation.
 ---
-
 # Global Security (PR Check)
 
 Pre-PR security & quality gates that work for any codebase with auto-fix and minimal token use.

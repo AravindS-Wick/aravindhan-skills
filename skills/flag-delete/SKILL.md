@@ -3,7 +3,6 @@ name: flag-delete
 description: Delete flag definition from config/flags.ini after code references are removed. Use when the user asks to delete a flag definition or remove a flag from config.
 disable-model-invocation: true
 ---
-
 # Flag delete
 
 ## Overview

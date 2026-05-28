@@ -3,7 +3,6 @@ name: flag-create
 description: Create new Mailchimp feature flag and PR. Use when the user asks to create a feature flag, add a new flag, or define a flag in config/flags.ini.
 disable-model-invocation: true
 ---
-
 # Create flag
 
 Create a new Mailchimp feature flag and PR -- see `.agent/rules/flag-config.mdc` for format details. If there's an existing implementation for the flag, create a second branch.
