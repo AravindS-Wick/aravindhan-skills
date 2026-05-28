@@ -1,0 +1,230 @@
+{
+  "updated": "2026-05-28T08:29:28Z",
+  "target": "/Users/aravindhan/.claude/skills",
+  "skills": {
+    "a11y": {
+      "path": "skills/a11y",
+      "description": "Review and fix accessibility issues (WCAG 2.2 Level AA). Use when the user asks for an accessibility review, runs /a11y, or wants to fix a11y issues in UI components, forms, or pages.",
+      "customized": true,
+      "note": "Genericized internal corporate URLs, hostnames, and paths."
+    },
+    "aravindhan-ui": {
+      "path": "skills/aravindhan-ui",
+      "description": ">"
+    },
+    "autodoc": {
+      "path": "skills/autodoc",
+      "description": ">"
+    },
+    "autolyse-convert": {
+      "path": "skills/autolyse-convert",
+      "description": "Convert a Controller action to an Autolyse gRPC service. Use when the user asks to convert a controller to Autolyse, create a gRPC service, or migrate an action to Autolyse.",
+      "customized": true,
+      "note": "Genericized internal corporate URLs, hostnames, and paths."
+    },
+    "autolyse-list": {
+      "path": "skills/autolyse-list",
+      "description": ">-"
+    },
+    "biz-analyst": {
+      "path": "skills/biz-analyst",
+      "description": ">"
+    },
+    "codeowners": {
+      "path": "skills/codeowners",
+      "description": "Look up CODEOWNERS information and use batch/owners. Use when the user asks who owns a file, which team to ping, what Slack channel to use for a file or feature, what reviewers to add to a PR, or for any batch/owners command (show, summarize, export report, change, sort, check)."
+    },
+    "create-global-ipd-attribute": {
+      "path": "skills/create-global-ipd-attribute",
+      "description": "Create a new IPD (In-Product Discovery) attribute provider hook for targeting in the Recommendations widget. Use when the user wants to add new attributes to IPD, add targeting data to the recommendations widget, create a new useIPDAttributes provider, or mentions IPD attributes."
+    },
+    "dev-account-create": {
+      "path": "skills/dev-account-create",
+      "description": "Create a new internal, experimental dev user account in the local Mailchimp dev environment. Automatically marks the account as internal and experimental (Optimizely). Asks for marketing plan, manual activation, feature flags, and account link interactively one at a time. Use when the user says \"create a dev account\", \"create a test user\", \"spin up a dev user\", or runs /dev-account-create.",
+      "customized": true,
+      "note": "Genericized internal corporate URLs, hostnames, and paths."
+    },
+    "dev-assistant": {
+      "path": "skills/dev-assistant",
+      "description": ">"
+    },
+    "flag-clean": {
+      "path": "skills/flag-clean",
+      "description": "Clean flag references from code and make behavior permanent. Use when the user asks to clean a feature flag from code, remove flag checks, or make flag behavior permanent.",
+      "customized": true,
+      "note": "Genericized internal corporate URLs, hostnames, and paths."
+    },
+    "flag-create": {
+      "path": "skills/flag-create",
+      "description": "Create new Mailchimp feature flag and PR. Use when the user asks to create a feature flag, add a new flag, or define a flag in config/flags.ini.",
+      "customized": true,
+      "note": "Genericized internal corporate URLs, hostnames, and paths."
+    },
+    "flag-delete": {
+      "path": "skills/flag-delete",
+      "description": "Delete flag definition from config/flags.ini after code references are removed. Use when the user asks to delete a flag definition or remove a flag from config.",
+      "customized": true,
+      "note": "Genericized internal corporate URLs, hostnames, and paths."
+    },
+    "flag-ramp": {
+      "path": "skills/flag-ramp",
+      "description": "Change an existing feature flag's percentage rollout. Use when the user asks to ramp a flag, change rollout percentage, or update enabled/enabled_e2e.",
+      "customized": true,
+      "note": "Genericized internal corporate URLs, hostnames, and paths."
+    },
+    "generate-mc-trx-email": {
+      "path": "skills/generate-mc-trx-email",
+      "description": "Generate a new Mailchimp transactional email template set (HTML, txt, metadata). Use when the user asks to generate a transactional email, create an email template, or add a trx email."
+    },
+    "global-security": {
+      "path": "skills/global-security",
+      "description": ">"
+    },
+    "global-tester": {
+      "path": "skills/global-tester",
+      "description": ">"
+    },
+    "jira-transition": {
+      "path": "skills/jira-transition",
+      "description": ">"
+    },
+    "lite-superpowers": {
+      "path": "skills/lite-superpowers",
+      "description": ">"
+    },
+    "market-researcher": {
+      "path": "skills/market-researcher",
+      "description": ">"
+    },
+    "marketing-strategist": {
+      "path": "skills/marketing-strategist",
+      "description": ">"
+    },
+    "merge-all-features": {
+      "path": "skills/merge-all-features",
+      "description": "End-to-end multi-repo feature shipping. Use whenever the user invokes \"/merge-all-features\" or asks to commit, push, and raise PRs across one or many repos at once. Splits a target folder into independent repos, groups uncommitted changes feature-by-feature, runs ESLint + Jest gates before every commit, commits in dependency order with clean messages (NO co-author trailers), pushes, opens PRs with full descriptions (purpose, file changes, work done, use cases, splatter zone / blast radius, new imports, feature flags, required reviewers, test + lint results), then self-reviews and posts the review on the PR with required actions. Works on a single repo, a folder of repos, or the current directory if it is itself a repo. Spawns parallel subagents (one per repo) on cheap/default models so independent repos progress concurrently. If one repo is blocked, surfaces the blocker to the user in **bold** and keeps going on the others."
+    },
+    "optimizely-create": {
+      "path": "skills/optimizely-create",
+      "description": "Create new Mailchimp A/B experiment (Optimizely) with class and registration. Use when the user asks to create an Optimizely experiment, A/B test, or experiment class.",
+      "customized": true,
+      "note": "Genericized internal corporate URLs, hostnames, and paths."
+    },
+    "orchestrate": {
+      "path": "skills/orchestrate",
+      "description": ">"
+    },
+    "pageready-marker-add": {
+      "path": "skills/pageready-marker-add",
+      "description": "Place the markPageReadyEnd() performance marker at the \"content ready\" point in a React component \u2014 i.e. after data has loaded and meaningful content is rendered, not on first paint/mount. Use when the user asks to add a PageReady marker, review an existing markPageReadyEnd placement, or ensure a marker fires at content-ready rather than shell-ready.",
+      "customized": true,
+      "note": "Genericized internal corporate URLs, hostnames, and paths."
+    },
+    "po-guide": {
+      "path": "skills/po-guide",
+      "description": ">"
+    },
+    "pr-create-from-commits": {
+      "path": "skills/pr-create-from-commits",
+      "description": "Create a PR from recent commits with Jira status and template. Use when the user asks to create a PR, open a pull request, or run pr-create-from-commits.",
+      "customized": true,
+      "note": "Genericized internal corporate URLs, hostnames, and paths."
+    },
+    "pr-list-by-author": {
+      "path": "skills/pr-list-by-author",
+      "description": "Lists open GitHub pull requests filtered by a user-supplied list of author logins and review state (not draft, not fully approved). Supports per-repo gh pr list or cross-repo gh search prs plus optional reviewDecision post-check, and optional posting to a Slack channel or canvas. Use when the user runs /pr-list-by-author, asks for a daily PR queue, PRs waiting on review, team triage, or sharing that list to Slack across named repos or all visible repos on GitHub Enterprise or GitHub.com.",
+      "customized": true,
+      "note": "Genericized internal corporate URLs, hostnames, and paths."
+    },
+    "pr-monitor": {
+      "path": "skills/pr-monitor",
+      "description": "Monitor PR CI checks with intelligent flaky test detection and optional auto-rerun. Use when the user wants to watch a PR, detect flaky tests, or automatically rerun failed CI. Invoke with /pr-monitor to monitor current PR or /pr-monitor <pr-number> for specific PR."
+    },
+    "pr-request-review": {
+      "path": "skills/pr-request-review",
+      "description": "Request a code review for a PR by finding the right Slack channel (from PR CODEOWNERS comment or capabilities.json), checking if a bot thread already exists in that channel, and bumping the thread or posting fresh. Use when the user runs /pr-request-review, asks to request a review, wants to ping a team for their PR, or says \"bump my PR\".",
+      "customized": true,
+      "note": "Genericized internal corporate URLs, hostnames, and paths."
+    },
+    "pr-review-triage": {
+      "path": "skills/pr-review-triage",
+      "description": "Monitor a Slack channel for new PR review requests, perform code reviews scoped to team-owned files, post findings to Slack threads, and approve or comment. Requires --channel, --team, and --repo arguments. Designed to run on /loop."
+    },
+    "pr-review": {
+      "path": "skills/pr-review",
+      "description": "Review a PR with code analysis, security checks, and optional Playwright test discovery. Use when the user runs /pr-review, asks to review a PR or their changes, says \"look at this PR\", \"check my diff\", \"review before I push\", or wants feedback on code changes. Fetches PR via gh pr view; offers Playwright test check/create when running locally with Playwright repo.",
+      "customized": true,
+      "note": "Genericized internal corporate URLs, hostnames, and paths."
+    },
+    "pr-status": {
+      "path": "skills/pr-status",
+      "description": "List open PRs for the current repository with merge readiness classification (Ready to merge / Awaiting approval / Blocked), CI status, approval state, conflict detection, and rebase guidance. Use when the user runs /pr-status, asks to see their open PRs, wants to check merge readiness, or asks which PRs need attention.",
+      "customized": true,
+      "note": "Genericized internal corporate URLs, hostnames, and paths."
+    },
+    "product-designer": {
+      "path": "skills/product-designer",
+      "description": ">"
+    },
+    "qa-automation": {
+      "path": "skills/qa-automation",
+      "description": ">"
+    },
+    "security-cmdexe": {
+      "path": "skills/security-cmdexe",
+      "description": "Convert PHP exec, shell_exec, system, passthru, or backticks to the ShellBuilder pattern. Use when PHP code contains those builtins; follows .agent/rules/security-cmdexe.mdc."
+    },
+    "security-csrf": {
+      "path": "skills/security-csrf",
+      "description": "Apply CSRF protection to state-changing controller actions and Autolyse services. Use when generating Mailchimp controllers or registering Autolyse services; follows .agent/rules/security-csrf.mdc."
+    },
+    "security-sqli": {
+      "path": "skills/security-sqli",
+      "description": "Apply SQL injection protection using prepared statements for database queries. Use when generating or modifying code that uses exec, query, queryOne, querySql, etc.; follows .agent/rules/security-sqli.mdc."
+    },
+    "security-unserialize": {
+      "path": "skills/security-unserialize",
+      "description": "Prevent serialization vulnerabilities when using serialize, unserialize, or magic methods. Use when generating or editing PHP code with serialization; follows .agent/rules/security-unserialize.mdc."
+    },
+    "security-xss": {
+      "path": "skills/security-xss",
+      "description": "Apply XSS protection to Avesta views (app/views/) and React views (web/js/src/). Use when editing views or when end-user HTML must be rendered; follows .agent/rules/security-xss.mdc."
+    },
+    "skills-router": {
+      "path": "skills/skills-router",
+      "description": ">"
+    },
+    "sms-review": {
+      "path": "skills/sms-review",
+      "description": "Pre-push code review for SMS and SmsBulk changes. Checks feature flag wrapping, exposed/debug code, React bad practices, dangerous linter disabling, DRY violations, and MCDS CSS compliance. Scoped to web/js/src/Main/Sms and web/js/src/Main/SmsBulk. Use before pushing or creating a PR for any SMS-related frontend changes, or whenever the user says \"review my SMS changes\", \"check my SMS code\", or asks if their SMS/SmsBulk changes are ready to push."
+    },
+    "sprint-commander": {
+      "path": "skills/sprint-commander",
+      "description": ">"
+    },
+    "standup": {
+      "path": "skills/standup",
+      "description": "Generate sprint summary for team standups with state changes and stagnant tickets. Use when the user runs /standup, asks for a standup report, or wants sprint summary for a JIRA board.",
+      "customized": true,
+      "note": "Genericized internal corporate URLs, hostnames, and paths."
+    },
+    "store-create": {
+      "path": "skills/store-create",
+      "description": "Create one or more dummy ecommerce stores with promo codes in the CWS dev environment. Prompts the user for store type(s), number of promo codes per store, user ID, and list ID, then executes the creation via docker exec into mc-dev-app. Use when the user wants to seed dev data for Shopify, Wix, Square, or WooCommerce stores.",
+      "customized": true,
+      "note": "Genericized internal corporate URLs, hostnames, and paths."
+    },
+    "weekly-performance-regression-report": {
+      "path": "skills/weekly-performance-regression-report",
+      "description": "Generate a weekly regression report for the Mailchimp monolith by querying Bugsnag (SmartBear MCP) for new errors and correlating them with recent releases and GitHub commits. Use when the user asks to check for performance degradation, find regressions, generate a weekly error report, or investigate what broke recently.",
+      "customized": true,
+      "note": "Genericized internal corporate URLs, hostnames, and paths."
+    },
+    "work-on": {
+      "path": "skills/work-on",
+      "description": "Start working on a Jira ticket by gathering context (ticket details, branches, PRs) and offering actions. Use when the user runs /work-on, asks to work on a ticket, or wants Jira ticket context and branch/PR info.",
+      "customized": true,
+      "note": "Genericized internal corporate URLs, hostnames, and paths."
+    }
+  }
+}
