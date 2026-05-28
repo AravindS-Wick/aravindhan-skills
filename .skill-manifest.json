@@ -1,10 +1,14 @@
 {
-  "updated": "2026-05-28T08:44:53Z",
+  "updated": "2026-05-28T08:57:53Z",
   "target": "/Users/aravindhan/.claude/skills",
   "skills": {
     "a11y": {
       "path": "skills/a11y",
       "description": "Review and fix accessibility issues (WCAG 2.2 Level AA). Use when the user asks for an accessibility review, runs /a11y, or wants to fix a11y issues in UI components, forms, or pages."
+    },
+    "accesslint-audit": {
+      "path": "skills/accesslint-audit",
+      "description": "Find and fix WCAG 2.2 accessibility issues. Two modes — report (sweep a codebase or page, produce a prioritized written report, no edits) and fix (audit→edit→verify loop on a target). Prefers direct-CDP live-DOM auditing; falls back to a browser-MCP composition or HTML-string audits."
     },
     "aeo-optimization": {
       "path": "skills/aeo-optimization",
@@ -42,6 +46,14 @@
       "path": "skills/autolyse-list",
       "description": "Manage and execute tasks for autolyse-list."
     },
+    "bencium-controlled-ux-designer": {
+      "path": "skills/bencium-controlled-ux-designer",
+      "description": "Expert UI/UX design guidance for unique, accessible interfaces. Use for visual decisions, colors, typography, layouts. Always ask before making design decisions. Use this skill when the user asks to build web components, pages, or applications."
+    },
+    "bencium-innovative-ux-designer": {
+      "path": "skills/bencium-innovative-ux-designer",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics."
+    },
     "biz-analyst": {
       "path": "skills/biz-analyst",
       "description": "Manage and execute tasks for biz-analyst."
@@ -49,6 +61,10 @@
     "brand-guidelines": {
       "path": "skills/brand-guidelines",
       "description": "Write copy following Sentry brand guidelines. Use when writing UI text, error messages, empty states, onboarding flows, 404 pages, documentation, marketing copy, or any user-facing content. Covers both Plain Speech (default) and Sentry Voice tones."
+    },
+    "building-native-ui": {
+      "path": "skills/building-native-ui",
+      "description": "Complete guide for building beautiful apps with Expo Router. Covers fundamentals, styling, components, navigation, animations, patterns, and native tabs."
     },
     "canvas-design": {
       "path": "skills/canvas-design",
@@ -81,6 +97,10 @@
     "claude-api": {
       "path": "skills/claude-api",
       "description": "\"Build apps with the Claude API or Anthropic SDK. TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`/`claude_agent_sdk`, or user asks to use Claude API, Anthropic SDKs, or Agent SDK. DO NOT TRIGGER when: code imports `openai`/other AI SDK, general programming, or ML/data-science tasks.\""
+    },
+    "claude-d3js-skill": {
+      "path": "skills/claude-d3js-skill",
+      "description": "\"This skill provides guidance for creating sophisticated, interactive data visualisations using d3.js.\""
     },
     "claude-opus-4-5-migration": {
       "path": "skills/claude-opus-4-5-migration",
@@ -142,6 +162,18 @@
       "path": "skills/email-tasks",
       "description": "Read and triage the user's Gmail inbox using Gmail automation tools. Pulls emails from a recent window (e.g. past 8 hours), filters out notifications/receipts/newsletters, and presents a list of emails requiring action or reply. Use when the user runs /email-tasks, asks to check their emails, or wants a summary of pending email tasks."
     },
+    "expo-tailwind-setup": {
+      "path": "skills/expo-tailwind-setup",
+      "description": "Set up Tailwind CSS v4 in Expo with react-native-css and NativeWind v5 for universal styling"
+    },
+    "expo-ui-jetpack-compose": {
+      "path": "skills/expo-ui-jetpack-compose",
+      "description": "\"`@expo/ui/jetpack-compose` package lets you use Jetpack Compose Views and modifiers in your app.\""
+    },
+    "expo-ui-swift-ui": {
+      "path": "skills/expo-ui-swift-ui",
+      "description": "\"`@expo/ui/swift-ui` package lets you use SwiftUI Views and modifiers in your app.\""
+    },
     "find-skills": {
       "path": "skills/find-skills",
       "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill."
@@ -198,6 +230,10 @@
       "path": "skills/frontend-design",
       "description": "\"You are a frontend designer-engineer, not a layout generator.\""
     },
+    "frontend-slides": {
+      "path": "skills/frontend-slides",
+      "description": "Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files. Use when the user wants to build a presentation, convert a PPT/PPTX to web, or create slides for a talk/pitch. Helps non-designers discover their aesthetic through visual exploration rather than abstract choices."
+    },
     "generate-mc-trx-email": {
       "path": "skills/generate-mc-trx-email",
       "description": "Generate a new Mailchimp transactional email template set (HTML, txt, metadata). Use when the user asks to generate a transactional email, create an email template, or add a trx email."
@@ -210,9 +246,17 @@
       "path": "skills/global-tester",
       "description": "Manage and execute tasks for global-tester."
     },
+    "grill-with-docs": {
+      "path": "skills/grill-with-docs",
+      "description": "Forces grounding using live documentation (Redis, Postgres, external API docs, frameworks) fetched via curl or web search before generating integration code or database schemas."
+    },
     "hook-development": {
       "path": "skills/hook-development",
       "description": "This skill should be used when the user asks to \"create a hook\", \"add a PreToolUse/PostToolUse/Stop hook\", \"validate tool use\", \"implement prompt-based hooks\", \"use ${CLAUDE_PLUGIN_ROOT}\", \"set up event-driven automation\", \"block dangerous commands\", or mentions hook events (PreToolUse, PostToolUse, Stop, SubagentStop, SessionStart, SessionEnd, UserPromptSubmit, PreCompact, Notification). Provides comprehensive guidance for creating and implementing Claude Code plugin hooks with focus on advanced prompt-based hooks API."
+    },
+    "improve-codebase-architecture": {
+      "path": "skills/improve-codebase-architecture",
+      "description": "Reorganizes backend codebases to enforce clean architectural patterns (Controllers, Services, Repositories/Data Access Objects) to reduce token bloat and maintain codebase longevity."
     },
     "init": {
       "path": "skills/init",
@@ -265,6 +309,10 @@
     "morning-intelligence": {
       "path": "skills/morning-intelligence",
       "description": "Generate a personalized daily morning briefing based on your professional role, focus areas, and preferred news sources. Use when the user runs /morning-intelligence, asks for their daily brief, or sets up a scheduled briefing routine."
+    },
+    "native-data-fetching": {
+      "path": "skills/native-data-fetching",
+      "description": "Use when implementing or debugging ANY network request, API call, or data fetching. Covers fetch API, React Query, SWR, error handling, caching, offline support, and Expo Router data loaders (`useLoaderData`)."
     },
     "notebooklm-connector": {
       "path": "skills/notebooklm-connector",
@@ -350,9 +398,17 @@
       "path": "skills/qa-automation",
       "description": "Manage and execute tasks for qa-automation."
     },
+    "remotion-best-practices": {
+      "path": "skills/remotion-best-practices",
+      "description": "\"Best practices for Remotion - Video creation in React\""
+    },
     "research": {
       "path": "skills/research",
       "description": "\"Fast agent specialized for exploring codebases and searching for code patterns. Use via spawn_subagent with skill='research' for read-only exploration tasks.\""
+    },
+    "security-audit": {
+      "path": "skills/security-audit",
+      "description": "Runs systematic audits for common web security vulnerabilities (OWASP Top 10, SQL injection, XSS, CSRF, insecure unserialization, command injection, and JWT misuse)."
     },
     "security-cmdexe": {
       "path": "skills/security-cmdexe",
@@ -418,6 +474,10 @@
       "path": "skills/sycophancy-buster",
       "description": "Disable default sycophantic agreement and challenge the user's assumptions. Argues the strongest case against the user's proposal, highlights blind spots, and refuses to agree unless presented with strong evidence. Use when the user runs /sycophancy-buster or /criticize, asks for critical feedback on an idea, or wants a devil's advocate review."
     },
+    "tdd": {
+      "path": "skills/tdd",
+      "description": "Enforces writing failing tests (red-green-refactor loop) in Jest, PyTest, JUnit, Vitest, Go test, or RSpec before implementing or modifying backend logic."
+    },
     "template-skill": {
       "path": "skills/template-skill",
       "description": "Replace with description of the skill and when Claude should use it."
@@ -429,6 +489,10 @@
     "ui-ux-pro-max": {
       "path": "skills/ui-ux-pro-max",
       "description": "\"Comprehensive design guide for web and mobile applications. Use when designing new UI components or pages, choosing color palettes and typography, or reviewing code for UX issues.\""
+    },
+    "use-dom": {
+      "path": "skills/use-dom",
+      "description": "Use Expo DOM components to run web code in a webview on native and as-is on web. Migrate web code to native incrementally."
     },
     "vercel-composition-patterns": {
       "path": "skills/vercel-composition-patterns",
@@ -442,9 +506,17 @@
       "path": "skills/vercel-react-native-skills",
       "description": "React Native and Expo deployment patterns on Vercel."
     },
+    "verify-endpoints": {
+      "path": "skills/verify-endpoints",
+      "description": "Boots a local dev server, listens to logs, runs curl/HTTP validation requests, checks status codes, and debugs failures automatically."
+    },
     "web-artifacts-builder": {
       "path": "skills/web-artifacts-builder",
       "description": "\"To build powerful frontend claude.ai artifacts, follow these steps:\""
+    },
+    "web-asset-generator": {
+      "path": "skills/web-asset-generator",
+      "description": "Generate web assets including favicons, app icons (PWA), and social media meta images (Open Graph) for Facebook, Twitter, WhatsApp, and LinkedIn. Use when users need icons, favicons, social sharing images, or Open Graph images from logos or text slogans. Handles image resizing, text-to-image generation, and provides proper HTML meta tags."
     },
     "web-design-guidelines": {
       "path": "skills/web-design-guidelines",
