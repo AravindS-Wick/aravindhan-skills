@@ -1,0 +1,10 @@
+{
+  "updated": "2026-05-22T06:16:06Z",
+  "target": "/tmp/tmp.fejd15EkBp",
+  "skills": {
+    "merge-all-features": {
+      "path": "skills/merge-all-features",
+      "description": "End-to-end multi-repo feature shipping. Use whenever the user invokes \"/merge-all-features\" or asks to commit, push, and raise PRs across one or many repos at once. Splits a target folder into independent repos, groups uncommitted changes feature-by-feature, runs ESLint + Jest gates before every commit, commits in dependency order with clean messages (NO co-author trailers), pushes, opens PRs with full descriptions (purpose, file changes, work done, use cases, splatter zone / blast radius, new imports, feature flags, required reviewers, test + lint results), then self-reviews and posts the review on the PR with required actions. Works on a single repo, a folder of repos, or the current directory if it is itself a repo. Spawns parallel subagents (one per repo) on cheap/default models so independent repos progress concurrently. If one repo is blocked, surfaces the blocker to the user in **bold** and keeps going on the others."
+    }
+  }
+}
