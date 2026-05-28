@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-28T08:39:24Z",
+  "updated": "2026-05-28T08:41:09Z",
   "target": "/Users/aravindhan/.claude/skills",
   "skills": {
     "a11y": {
@@ -13,6 +13,10 @@
     "aravindhan-ui": {
       "path": "skills/aravindhan-ui",
       "description": ">"
+    },
+    "article-thumbnails": {
+      "path": "skills/article-thumbnails",
+      "description": "Generate article and newsletter thumbnail candidates using the Gemini API. Analyzes article copy, constructs image prompts matching brand specs, calls the model, and evaluates candidates. Use when the user runs /article-thumbnails, asks to create a newsletter/article thumbnail, or wants image candidates for an article."
     },
     "autodoc": {
       "path": "skills/autodoc",
@@ -49,6 +53,10 @@
     "dev-assistant": {
       "path": "skills/dev-assistant",
       "description": ">"
+    },
+    "email-tasks": {
+      "path": "skills/email-tasks",
+      "description": "Read and triage the user's Gmail inbox using Gmail automation tools. Pulls emails from a recent window (e.g. past 8 hours), filters out notifications/receipts/newsletters, and presents a list of emails requiring action or reply. Use when the user runs /email-tasks, asks to check their emails, or wants a summary of pending email tasks."
     },
     "flag-clean": {
       "path": "skills/flag-clean",
@@ -105,6 +113,14 @@
     "merge-all-features": {
       "path": "skills/merge-all-features",
       "description": "End-to-end multi-repo feature shipping. Use whenever the user invokes \"/merge-all-features\" or asks to commit, push, and raise PRs across one or many repos at once. Splits a target folder into independent repos, groups uncommitted changes feature-by-feature, runs ESLint + Jest gates before every commit, commits in dependency order with clean messages (NO co-author trailers), pushes, opens PRs with full descriptions (purpose, file changes, work done, use cases, splatter zone / blast radius, new imports, feature flags, required reviewers, test + lint results), then self-reviews and posts the review on the PR with required actions. Works on a single repo, a folder of repos, or the current directory if it is itself a repo. Spawns parallel subagents (one per repo) on cheap/default models so independent repos progress concurrently. If one repo is blocked, surfaces the blocker to the user in **bold** and keeps going on the others."
+    },
+    "morning-intelligence": {
+      "path": "skills/morning-intelligence",
+      "description": "Generate a personalized daily morning briefing based on your professional role, focus areas, and preferred news sources. Use when the user runs /morning-intelligence, asks for their daily brief, or sets up a scheduled briefing routine."
+    },
+    "notebooklm-connector": {
+      "path": "skills/notebooklm-connector",
+      "description": "Automate NotebookLM actions using the agent-browser CLI. Supports creating notebooks, uploading sources (links, documents), and generating mindmaps or audio summaries. Use when the user runs /notebooklm, asks to automate NotebookLM, or wants to create audio summaries/study guides."
     },
     "notes-humanizer": {
       "path": "skills/notes-humanizer",
@@ -201,6 +217,10 @@
     "store-create": {
       "path": "skills/store-create",
       "description": "Create one or more dummy ecommerce stores with promo codes in the CWS dev environment. Prompts the user for store type(s), number of promo codes per store, user ID, and list ID, then executes the creation via docker exec into mc-dev-app. Use when the user wants to seed dev data for Shopify, Wix, Square, or WooCommerce stores."
+    },
+    "substack-notes-scraper": {
+      "path": "skills/substack-notes-scraper",
+      "description": "Scrape Substack Notes metrics for a specific author and time period. Uses agent-browser to load the page, scrolls to fetch all posts, extracts metrics (likes, comments, restacks), and formats them as a structured spreadsheet (.xlsx). Use when the user runs /substack-notes-scraper, asks to scrape/analyze Substack notes, or wants a metrics report on Substack posts."
     },
     "sycophancy-buster": {
       "path": "skills/sycophancy-buster",
