@@ -1,7 +1,11 @@
 {
-  "updated": "2026-05-28T09:06:04Z",
+  "updated": "2026-06-28T16:40:34Z",
   "target": "/Users/aravindhan/.claude/skills",
   "skills": {
+    "a11y-debugging": {
+      "path": "skills/a11y-debugging",
+      "description": "Uses Chrome DevTools MCP for accessibility (a11y) debugging and auditing based on web.dev guidelines. Use when testing semantic HTML, ARIA labels, focus states, keyboard navigation, tap targets, and color contrast."
+    },
     "a11y": {
       "path": "skills/a11y",
       "description": "Review and fix accessibility issues (WCAG 2.2 Level AA). Use when the user asks for an accessibility review, runs /a11y, or wants to fix a11y issues in UI components, forms, or pages."
@@ -70,6 +74,14 @@
       "path": "skills/canvas-design",
       "description": "\"These are instructions for creating design philosophies - aesthetic movements that are then EXPRESSED VISUALLY. Output only .md files, .pdf files, and .png files.\""
     },
+    "chrome-devtools": {
+      "path": "skills/chrome-devtools",
+      "description": "Uses Chrome DevTools via MCP for efficient debugging, troubleshooting and browser automation. Use when debugging web pages, automating browser interactions, analyzing performance, or inspecting network requests. This skill does not apply to `--slim` mode (MCP configuration)."
+    },
+    "chrome-extensions": {
+      "path": "skills/chrome-extensions",
+      "description": ">"
+    },
     "ckm-banner-design": {
       "path": "skills/ckm-banner-design",
       "description": "\"Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with AI-generated visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, website hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage. Uses ui-ux-pro-max, frontend-design, ai-artist, ai-multimodal skills.\""
@@ -122,6 +134,10 @@
       "path": "skills/command-development",
       "description": "This skill should be used when the user asks to \"create a slash command\", \"add a command\", \"write a custom command\", \"define command arguments\", \"use command frontmatter\", \"organize commands\", \"create command with file references\", \"interactive command\", \"use AskUserQuestion in command\", or needs guidance on slash command structure, YAML frontmatter fields, dynamic arguments, bash execution in commands, user interaction patterns, or command development best practices for Claude Code."
     },
+    "commit": {
+      "path": "skills/commit",
+      "description": "ALWAYS use this skill when committing code changes — never commit directly without it. Creates commits following Sentry conventions with proper conventional commit format and issue references. Trigger on any commit, git commit, save changes, or commit message task."
+    },
     "composio": {
       "path": "skills/composio",
       "description": "Use 1000+ external apps via Composio - either directly through the CLI or by building AI agents and apps with the SDK"
@@ -129,6 +145,10 @@
     "comprehensive-review": {
       "path": "skills/comprehensive-review",
       "description": "\"Comprehensive code review using parallel specialized subagents. If a PR URL is provided, fetches PR details and can post comments. If no PR is provided, reviews the diff between the current branch and its base branch plus any uncommitted changes. CRITICAL: this skill is costly, don't use it unless user explicitly requested to use it.\""
+    },
+    "concise-planning": {
+      "path": "skills/concise-planning",
+      "description": "\"Use when a user asks for a plan for a coding task, to generate a clear, actionable, and atomic checklist.\""
     },
     "context-mode": {
       "path": "skills/context-mode",
@@ -161,6 +181,10 @@
     "docx": {
       "path": "skills/docx",
       "description": "\"A user may ask you to create, edit, or analyze the contents of a .docx file. A .docx file is essentially a ZIP archive containing XML files and other resources that you can read or edit. You have different tools and workflows available for different tasks.\""
+    },
+    "e2e-testing": {
+      "path": "skills/e2e-testing",
+      "description": "\"End-to-end testing workflow with Playwright for browser automation, visual regression, cross-browser testing, and CI/CD integration.\""
     },
     "email-tasks": {
       "path": "skills/email-tasks",
@@ -238,6 +262,14 @@
       "path": "skills/frontend-slides",
       "description": "Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files. Use when the user wants to build a presentation, convert a PPT/PPTX to web, or create slides for a talk/pitch. Helps non-designers discover their aesthetic through visual exploration rather than abstract choices."
     },
+    "gemini-api-dev": {
+      "path": "skills/gemini-api-dev",
+      "description": "\"The Gemini API provides access to Google's most advanced AI models. Key capabilities include:\""
+    },
+    "gemini-api-integration": {
+      "path": "skills/gemini-api-integration",
+      "description": "\"Use when integrating Google Gemini API into projects. Covers model selection, multimodal inputs, streaming, function calling, and production best practices.\""
+    },
     "generate-mc-trx-email": {
       "path": "skills/generate-mc-trx-email",
       "description": "Generate a new Mailchimp transactional email template set (HTML, txt, metadata). Use when the user asks to generate a transactional email, create an email template, or add a trx email."
@@ -249,6 +281,10 @@
     "global-tester": {
       "path": "skills/global-tester",
       "description": "Manage and execute tasks for global-tester."
+    },
+    "go-playwright": {
+      "path": "skills/go-playwright",
+      "description": "\"Expert capability for robust, stealthy, and efficient browser automation using Playwright Go.\""
     },
     "grill-me": {
       "path": "skills/grill-me",
@@ -289,6 +325,10 @@
     "legal-docs-generator": {
       "path": "skills/legal-docs-generator",
       "description": "Generate Privacy Policies, Terms of Service, and other legal documents with 7-level verification."
+    },
+    "lint-and-validate": {
+      "path": "skills/lint-and-validate",
+      "description": "\"MANDATORY: Run appropriate validation tools after EVERY code change. Do not finish a task until the code is error-free.\""
     },
     "lite-superpowers": {
       "path": "skills/lite-superpowers",
@@ -354,6 +394,10 @@
       "path": "skills/planetscale",
       "description": "Database schema branching, indexing, N+1 query prevention, query plans, and safe online migrations for MySQL/PostgreSQL databases. Use when working on database schemas, migrations, or query optimization."
     },
+    "playwright-skill": {
+      "path": "skills/playwright-skill",
+      "description": "\"IMPORTANT - Path Resolution: This skill can be installed in different locations (plugin system, manual installation, global, or project-specific). Before executing any commands, determine the skill directory based on where you loaded this SKILL.md file, and use that path in all commands below.\""
+    },
     "playwright": {
       "path": "skills/playwright",
       "description": "\"Browser automation with Playwright. Use when the user asks to test a website, take screenshots, check responsive design, test login flows, fill forms, check broken links, or automate any browser task.\""
@@ -405,6 +449,10 @@
     "product-designer": {
       "path": "skills/product-designer",
       "description": "Manage and execute tasks for product-designer."
+    },
+    "prompt-engineering-patterns": {
+      "path": "skills/prompt-engineering-patterns",
+      "description": "\"Master advanced prompt engineering techniques to maximize LLM performance, reliability, and controllability.\""
     },
     "qa-automation": {
       "path": "skills/qa-automation",
@@ -490,6 +538,10 @@
       "path": "skills/sycophancy-buster",
       "description": "Disable default sycophantic agreement and challenge the user's assumptions. Argues the strongest case against the user's proposal, highlights blind spots, and refuses to agree unless presented with strong evidence. Use when the user runs /sycophancy-buster or /criticize, asks for critical feedback on an idea, or wants a devil's advocate review."
     },
+    "systematic-debugging": {
+      "path": "skills/systematic-debugging",
+      "description": "\"Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes\""
+    },
     "tdd": {
       "path": "skills/tdd",
       "description": "Enforces writing failing tests (red-green-refactor loop) in Jest, PyTest, JUnit, Vitest, Go test, or RSpec before implementing or modifying backend logic."
@@ -521,6 +573,10 @@
     "use-dom": {
       "path": "skills/use-dom",
       "description": "Use Expo DOM components to run web code in a webview on native and as-is on web. Migrate web code to native incrementally."
+    },
+    "using-git-worktrees": {
+      "path": "skills/using-git-worktrees",
+      "description": "\"Git worktrees create isolated workspaces sharing the same repository, allowing work on multiple branches simultaneously without switching.\""
     },
     "vercel-composition-patterns": {
       "path": "skills/vercel-composition-patterns",

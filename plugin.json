@@ -1,0 +1,13 @@
+{
+  "name": "aravindhan-skills",
+  "version": "1.0.0",
+  "description": "Aravindhan's personal skills repository",
+  "author": {
+    "name": "Aravindhan"
+  },
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "personal"
+  ]
+}
