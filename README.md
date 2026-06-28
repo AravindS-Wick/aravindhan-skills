@@ -6,17 +6,15 @@ This repo holds every Claude skill Aravindhan uses — built from scratch, adapt
 
 ---
 
-## Quick start
+## ⚠️ MANDATORY WORKFLOW RULES (2nd Most Important Policy)
 
-```bash
-git clone <this-repo> ~/personal/aravindhan-skills
-cd ~/personal/aravindhan-skills
-./install.sh
-```
+All developers and AI agents operating in this repository must strictly adhere to the following rules (detailed in [rules/](file:///Users/aravindhan/personal/aravindhan-skills/rules/)):
 
-That symlinks every directory under `skills/` into `~/.claude/skills/`. New skills are picked up automatically next time you run install.
-
-On a second machine? Same three commands. The skills travel with the repo.
+1. **Branch Naming**: Only use `feature/<short-name>` or `bugfix/<short-name>`.
+2. **Visual Validation**: If there are UI/visual changes, you must capture `before.png` and `after.png` screenshots, commit them to the branch, and embed them in the PR body.
+3. **PR Check Compliance**: All automated tests, linter checks, and build steps must pass before merging.
+4. **AI Self-Review**: Every PR must undergo a self-review by another AI agent (subagent) using a different model before approval.
+5. **Timeline SLA**: Review comments or linter issues must be resolved by an agent within **3 working days**. Non-blockers can be logged and deferred.
 
 ---
 
@@ -25,17 +23,24 @@ On a second machine? Same three commands. The skills travel with the repo.
 ```
 aravindhan-skills/
 ├── README.md                 # this file
-├── install.sh                # symlink skills into ~/.claude/skills/
-├── uninstall.sh              # remove symlinks (skills remain in the repo)
+├── install.sh                # symlink skills recursively into ~/.claude/skills/
+├── uninstall.sh              # remove symlinks
 ├── doctor.sh                 # diagnose install state
 ├── .skill-manifest.json      # registry: source, version, description per skill
-├── skills/
-│   ├── merge-all-features/   # pre-installed: multi-repo PR shipping
-│   └── <other skills>/
+├── rules/                    # mandatory workflow rules and guidelines
+│   ├── README.md             # rules overview
+│   ├── exclusive_rules.md    # strict branch, PR, and SLA rules
+│   ├── agent_self_review.md  # AI PR review protocol
+│   ├── minor_optional.md     # blocker categorization and deferral rules
+│   └── skill_rules.md        # integration rules for repository skills
+├── skills/                   # premium/core skills (e.g. merge-all-features)
+│   ├── basic/                # simple utility/basic skills (e.g. pdf, pptx, docx)
+│   ├── dependent/            # shared helper/dependency skills
+│   └── library/              # bulk imported skills library (1,200+ skills)
 ├── scripts/
 │   ├── add_skill.sh          # add a single new skill from a path
 │   ├── import_from_dir.sh    # bulk import from a folder of skills
-│   └── validate_all.sh       # validate every SKILL.md frontmatter
+│   └── validate_all.sh       # validate every SKILL.md recursively
 └── docs/
     ├── ADDING-SKILLS.md
     └── CUSTOMIZING.md        # genericizing org-specific skills

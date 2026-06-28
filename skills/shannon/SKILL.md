@@ -44,6 +44,7 @@ metadata:
       - white-box
       - appsec
 ---
+
 # Shannon: Autonomous AI Pentester for Web Apps & APIs
 
 > **Permissions overview:** This skill orchestrates Shannon, a Docker-based pentesting tool that actively executes attacks against a target application. It clones/updates the Shannon repo locally, runs Docker containers, and reads pentest reports. **Shannon performs real exploits — only run against apps you own or have explicit written authorization to test.** Never run against production systems.

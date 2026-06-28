@@ -19,24 +19,85 @@ if [[ ! -d "$TARGET" ]]; then
 fi
 
 echo "--- Skills in repo ---"
-shopt -s nullglob
-local_skills=()
-for d in "$SKILLS_SRC"/*/; do
-  name="$(basename "$d")"
-  if [[ -f "$d/SKILL.md" ]]; then
-    local_skills+=("$name")
-    echo "  📁 $name"
-  else
-    echo "  ⚠️  $name (no SKILL.md — won't install)"
+all_skill_mds=()
+while IFS= read -r -d '' skill_md; do
+  all_skill_mds+=("$skill_md")
+done < <(find "$SKILLS_SRC" -type f -name "SKILL.md" -print0)
+
+# Sort logic to prioritize main folders over dependents, basic, and library
+sorted_skill_mds=()
+# 1. Main core skills (depth 2: skills/<skill-name>/SKILL.md)
+for p in "${all_skill_mds[@]}"; do
+  dir="$(dirname "$p")"
+  parent="$(dirname "$dir")"
+  if [[ "$parent" == "$SKILLS_SRC" ]]; then
+    sorted_skill_mds+=("$p")
   fi
 done
-shopt -u nullglob
+# 2. Dependent skills (depth 3: skills/dependent/<skill-name>/SKILL.md)
+for p in "${all_skill_mds[@]}"; do
+  dir="$(dirname "$p")"
+  parent="$(dirname "$dir")"
+  if [[ "$(basename "$parent")" == "dependent" ]]; then
+    sorted_skill_mds+=("$p")
+  fi
+done
+# 3. Basic skills (depth 3: skills/basic/<skill-name>/SKILL.md)
+for p in "${all_skill_mds[@]}"; do
+  dir="$(dirname "$p")"
+  parent="$(dirname "$dir")"
+  if [[ "$(basename "$parent")" == "basic" ]]; then
+    sorted_skill_mds+=("$p")
+  fi
+done
+# 4. Library skills (depth 3: skills/library/<skill-name>/SKILL.md)
+for p in "${all_skill_mds[@]}"; do
+  dir="$(dirname "$p")"
+  parent="$(dirname "$dir")"
+  if [[ "$(basename "$parent")" == "library" ]]; then
+    sorted_skill_mds+=("$p")
+  fi
+done
+# 5. Anything else
+for p in "${all_skill_mds[@]}"; do
+  dir="$(dirname "$p")"
+  parent="$(dirname "$dir")"
+  pname="$(basename "$parent")"
+  if [[ "$parent" != "$SKILLS_SRC" && "$pname" != "dependent" && "$pname" != "basic" && "$pname" != "library" ]]; then
+    sorted_skill_mds+=("$p")
+  fi
+done
+
+declared_skills=()
+local_skills=()
+local_paths=()
+
+for p in "${sorted_skill_mds[@]}"; do
+  src="$(dirname "$p")"
+  name="$(basename "$src")"
+  
+  duplicate=0
+  for processed in "${declared_skills[@]+"${declared_skills[@]}"}"; do
+    if [[ "$processed" == "$name" ]]; then
+      duplicate=1
+      break
+    fi
+  done
+  if [[ $duplicate -eq 1 ]]; then
+    continue
+  fi
+  declared_skills+=("$name")
+  local_skills+=("$name")
+  local_paths+=("$src")
+  echo "  📁 $name"
+done
 echo ""
 
 echo "--- State at target ---"
-for name in "${local_skills[@]}"; do
+for i in "${!local_skills[@]+"${!local_skills[@]}"}"; do
+  name="${local_skills[$i]}"
+  src="${local_paths[$i]}"
   dest="$TARGET/$name"
-  src="$SKILLS_SRC/$name"
   if [[ -L "$dest" ]]; then
     target_of_link="$(readlink "$dest")"
     if [[ "$target_of_link" == "$src" ]]; then
@@ -46,7 +107,7 @@ for name in "${local_skills[@]}"; do
         echo "  💔 $name → linked but target missing ($target_of_link)"
       fi
     else
-      echo "  ⚠️  $name → linked but to something else: $target_of_link"
+      echo "  ⚠️  $name → linked but to another path: $target_of_link"
     fi
   elif [[ -e "$dest" ]]; then
     echo "  🚫 $name → exists at target but is NOT a symlink (collision)"
@@ -64,7 +125,7 @@ for entry in "$TARGET"/*; do
   name="$(basename "$entry")"
   # Skip if it's one of ours
   is_ours=0
-  for s in "${local_skills[@]}"; do
+  for s in "${local_skills[@]+"${local_skills[@]}"}"; do
     if [[ "$s" == "$name" ]]; then is_ours=1; break; fi
   done
   [[ $is_ours -eq 1 ]] && continue

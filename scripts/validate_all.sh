@@ -21,17 +21,15 @@ FILTER="${1:-}"
 
 fail=0
 
-shopt -s nullglob
-for skill_dir in "$SKILLS_SRC"/*/; do
+all_skill_mds=()
+while IFS= read -r -d '' skill_md; do
+  all_skill_mds+=("$skill_md")
+done < <(find "$SKILLS_SRC" -type f -name "SKILL.md" -print0)
+
+for skill_md in "${all_skill_mds[@]}"; do
+  skill_dir="$(dirname "$skill_md")"
   name="$(basename "$skill_dir")"
   [[ -n "$FILTER" && "$FILTER" != "$name" ]] && continue
-  skill_md="$skill_dir/SKILL.md"
-
-  if [[ ! -f "$skill_md" ]]; then
-    echo "❌ $name — no SKILL.md"
-    fail=1
-    continue
-  fi
 
   # Extract frontmatter (between first two --- lines)
   fm="$(awk '/^---[[:space:]]*$/{c++; next} c==1' "$skill_md")"
@@ -42,8 +40,8 @@ for skill_dir in "$SKILLS_SRC"/*/; do
     continue
   fi
 
-  fm_name="$(echo "$fm" | awk -F': *' '/^name:/{print $2; exit}')"
-  fm_desc="$(echo "$fm" | awk -F': *' '/^description:/{sub(/^description: */,""); print; exit}')"
+  fm_name="$(echo "$fm" | awk -F': *' '/^name:/{print $2; exit}' | sed -E 's/^"([^"]+)"$/\1/; s/^'\''([^'\'']+)'\''$/\1/')"
+  fm_desc="$(echo "$fm" | awk -F': *' '/^description:/{sub(/^description: */,""); print; exit}' | sed -E 's/^"([^"]+)"$/\1/; s/^'\''([^'\'']+)'\''$/\1/')"
 
   problems=()
   [[ -z "$fm_name" ]] && problems+=("missing 'name:'")
@@ -80,7 +78,6 @@ except yaml.YAMLError as e:
     fail=1
   fi
 done
-shopt -u nullglob
 
 if [[ -n "$FILTER" && $fail -eq 0 ]]; then
   exit 0
