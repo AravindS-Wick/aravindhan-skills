@@ -1,0 +1,85 @@
+name: Validate Skills
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Validate SKILL.md frontmatter
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Run frontmatter validation
+        run: |
+          chmod +x ./scripts/validate_all.sh
+          ./scripts/validate_all.sh
+
+      - name: Count skills and post summary
+        if: github.event_name == 'pull_request'
+        run: |
+          CORE=$(ls skills/ | grep -v "^basic$\|^library$\|^dependent$" | wc -l | tr -d ' ')
+          LIB=$(ls skills/library/ 2>/dev/null | wc -l | tr -d ' ')
+          BASIC=$(ls skills/basic/ 2>/dev/null | wc -l | tr -d ' ')
+          DEP=$(ls skills/dependent/ 2>/dev/null | wc -l | tr -d ' ')
+          TOTAL=$((CORE + LIB + BASIC + DEP))
+          echo "## 📊 Skill Count" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Tier | Count |" >> $GITHUB_STEP_SUMMARY
+          echo "|---|---|" >> $GITHUB_STEP_SUMMARY
+          echo "| ⭐ Core | $CORE |" >> $GITHUB_STEP_SUMMARY
+          echo "| 📚 Library | $LIB |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🔧 Basic | $BASIC |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🔗 Dependent | $DEP |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Total** | **$TOTAL** |" >> $GITHUB_STEP_SUMMARY
+
+      - name: Check CATALOG.md is up to date
+        if: github.event_name == 'pull_request'
+        run: |
+          # Warn if skills changed but CATALOG.md wasn't updated
+          CHANGED_SKILLS=$(git diff --name-only origin/main...HEAD | grep "^skills/" | grep "SKILL.md" | wc -l | tr -d ' ')
+          CATALOG_CHANGED=$(git diff --name-only origin/main...HEAD | grep "^skills/CATALOG.md" | wc -l | tr -d ' ')
+          if [ "$CHANGED_SKILLS" -gt "0" ] && [ "$CATALOG_CHANGED" -eq "0" ]; then
+            echo "⚠️ Warning: SKILL.md files changed but skills/CATALOG.md was not updated."
+            echo "Run: python3 scripts/generate_catalog.py && git add skills/CATALOG.md"
+            echo "catalog_stale=true" >> $GITHUB_ENV
+          fi
+
+      - name: Validate AGENTS.md exists
+        run: |
+          if [ ! -f "AGENTS.md" ]; then
+            echo "❌ AGENTS.md is missing — required for AI agent discoverability"
+            exit 1
+          fi
+          echo "✅ AGENTS.md present"
+
+      - name: Validate CLAUDE.md exists
+        run: |
+          if [ ! -f "CLAUDE.md" ]; then
+            echo "❌ CLAUDE.md is missing — required for Claude Code agent rules"
+            exit 1
+          fi
+          echo "✅ CLAUDE.md present"
+
+      - name: Validate llms.txt exists
+        run: |
+          if [ ! -f "llms.txt" ]; then
+            echo "❌ llms.txt is missing — required for AI crawler discoverability"
+            exit 1
+          fi
+          echo "✅ llms.txt present"

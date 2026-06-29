@@ -1,0 +1,57 @@
+# aravindhan-skills
+
+> A personal Claude AI skills library — version-controlled, self-installing, and built for daily use across machines.
+
+## What This Is
+
+A curated collection of 158+ Claude Code skills organized into a four-tier folder hierarchy. Each skill is a directory containing a `SKILL.md` file with YAML frontmatter and markdown instructions. When installed, Claude Code reads these files and uses them to extend its capabilities in a session.
+
+This is a personal power-user toolkit, not a framework or package. It has no runtime dependencies.
+
+## Folder Structure
+
+- `skills/` — 158 core skills, curated and production-grade. Installed with highest priority.
+- `skills/basic/` — 3 foundational format/utility skills (DOCX, PDF, PPTX handling).
+- `skills/library/` — 1271 community and upstream skills imported for discoverability. Never overrides core.
+- `skills/dependent/` — Skills that require other skills to function. Installed last.
+- `rules/` — A mandatory rules engine applied to every PR raised against this repo.
+
+## Key Capabilities
+
+Agent & Orchestration: merge-all-features (multi-repo PR shipping with parallel agents), agent-development, agent-manager-skill, orchestrate, skills-router, comprehensive-review
+
+Security: shannon (autonomous AI pentester), security-audit (OWASP Top 10), global-security (pre-commit gate), terrashark (Terraform safety)
+
+Web & Browser: chrome-extensions (Manifest V3), a11y (WCAG 2.2 AA), playwright-skill, webapp-testing, web-asset-generator
+
+Design & UI: ui-ux-pro-max, ckm-design, frontend-slides, algorithmic-art, theme-factory
+
+Mobile: building-native-ui (Expo Router), expo-tailwind-setup, expo-ui-swift-ui, expo-ui-jetpack-compose
+
+Backend & DevOps: mcp-integration, mcp-builder, deploy-to-vercel, global-tester, spartan-ai-toolkit
+
+PR & Git: pr-create-from-commits, pr-review, pr-monitor, commit, work-on
+
+Research: firecrawl (full web scraping suite), last30days, morning-intelligence
+
+## Rules Engine
+
+Every PR against this repo must: (1) come from a branch, (2) link a GitHub Issue, (3) pass all CI checks, (4) include an AI self-review by a secondary agent, (5) include before/after screenshots for UI changes, (6) have no unresolved blocking review comments.
+
+Non-blocking findings from AI review become follow-up GitHub Issues, labeled priority-2, resolved within 3 working days.
+
+## Install
+
+```bash
+git clone https://github.com/AravindS-Wick/aravindhan-skills ~/personal/aravindhan-skills
+cd ~/personal/aravindhan-skills
+./install.sh
+```
+
+## Key Files
+
+- README: https://github.com/AravindS-Wick/aravindhan-skills/blob/main/README.md
+- AGENTS.md: https://github.com/AravindS-Wick/aravindhan-skills/blob/main/AGENTS.md
+- Rules: https://github.com/AravindS-Wick/aravindhan-skills/tree/main/rules
+- Skill Catalog: https://github.com/AravindS-Wick/aravindhan-skills/blob/main/skills/CATALOG.md
+- Manifest: https://github.com/AravindS-Wick/aravindhan-skills/blob/main/.skill-manifest.json
