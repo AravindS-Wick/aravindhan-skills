@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aravindhs-wick.github.io/aravindhan-skills/sitemap.xml

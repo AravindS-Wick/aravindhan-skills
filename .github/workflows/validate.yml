@@ -1,4 +1,4 @@
-name: Validate Skills
+name: Validate Skills & Deploy
 
 on:
   pull_request:
@@ -6,32 +6,76 @@ on:
   push:
     branches: [main]
 
-jobs:
-  validate:
-    name: Validate SKILL.md frontmatter
-    runs-on: ubuntu-latest
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  pull-requests: write
 
+jobs:
+  # ── Job 1: Validate ─────────────────────────────────────────
+  validate:
+    name: Validate Skills
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install PyYAML
         run: pip install pyyaml
 
-      - name: Run frontmatter validation
+      - name: Validate SKILL.md frontmatter
         run: |
-          chmod +x ./scripts/validate_all.sh
-          ./scripts/validate_all.sh
+          python3 - << 'PYEOF'
+          import os, re, sys
+          errors = []
+          TIERS = ['skills', 'skills/basic', 'skills/library', 'skills/dependent']
+          for tier in TIERS:
+              if not os.path.exists(tier):
+                  continue
+              for skill in os.listdir(tier):
+                  skill_path = os.path.join(tier, skill)
+                  if not os.path.isdir(skill_path):
+                      continue
+                  if skill in ('basic', 'library', 'dependent'):
+                      continue
+                  md_path = os.path.join(skill_path, 'SKILL.md')
+                  if not os.path.exists(md_path):
+                      errors.append(f"Missing SKILL.md: {skill_path}/")
+                      continue
+                  with open(md_path) as f:
+                      content = f.read()
+                  if not content.startswith('---'):
+                      errors.append(f"Missing frontmatter: {md_path}")
+                      continue
+                  if 'name:' not in content:
+                      errors.append(f"Missing 'name:' in frontmatter: {md_path}")
+                  if 'description:' not in content:
+                      errors.append(f"Missing 'description:' in frontmatter: {md_path}")
+          if errors:
+              print("❌ Validation errors:")
+              for e in errors:
+                  print(f"  {e}")
+              sys.exit(1)
+          print(f"✅ All SKILL.md files valid")
+          PYEOF
 
-      - name: Count skills and post summary
-        if: github.event_name == 'pull_request'
+      - name: Validate required root files
+        run: |
+          for f in AGENTS.md CLAUDE.md llms.txt; do
+            if [ ! -f "$f" ]; then
+              echo "❌ Missing required file: $f"
+              exit 1
+            fi
+            echo "✅ $f present"
+          done
+
+      - name: Skill count summary
         run: |
           CORE=$(ls skills/ | grep -v "^basic$\|^library$\|^dependent$" | wc -l | tr -d ' ')
           LIB=$(ls skills/library/ 2>/dev/null | wc -l | tr -d ' ')
@@ -48,38 +92,57 @@ jobs:
           echo "| 🔗 Dependent | $DEP |" >> $GITHUB_STEP_SUMMARY
           echo "| **Total** | **$TOTAL** |" >> $GITHUB_STEP_SUMMARY
 
-      - name: Check CATALOG.md is up to date
+      - name: Check if CATALOG.md needs update
         if: github.event_name == 'pull_request'
         run: |
-          # Warn if skills changed but CATALOG.md wasn't updated
-          CHANGED_SKILLS=$(git diff --name-only origin/main...HEAD | grep "^skills/" | grep "SKILL.md" | wc -l | tr -d ' ')
-          CATALOG_CHANGED=$(git diff --name-only origin/main...HEAD | grep "^skills/CATALOG.md" | wc -l | tr -d ' ')
-          if [ "$CHANGED_SKILLS" -gt "0" ] && [ "$CATALOG_CHANGED" -eq "0" ]; then
-            echo "⚠️ Warning: SKILL.md files changed but skills/CATALOG.md was not updated."
-            echo "Run: python3 scripts/generate_catalog.py && git add skills/CATALOG.md"
-            echo "catalog_stale=true" >> $GITHUB_ENV
+          CHANGED=$(git diff --name-only origin/main...HEAD | grep "^skills/" | grep "SKILL.md" | wc -l | tr -d ' ')
+          CATALOG_CHANGED=$(git diff --name-only origin/main...HEAD | grep "skills/CATALOG.md" | wc -l | tr -d ' ')
+          if [ "$CHANGED" -gt "0" ] && [ "$CATALOG_CHANGED" -eq "0" ]; then
+            echo "⚠️  Skill files changed but CATALOG.md not updated. Run: python3 scripts/generate_catalog.py"
           fi
 
-      - name: Validate AGENTS.md exists
-        run: |
-          if [ ! -f "AGENTS.md" ]; then
-            echo "❌ AGENTS.md is missing — required for AI agent discoverability"
-            exit 1
-          fi
-          echo "✅ AGENTS.md present"
+  # ── Job 2: Auto-regenerate skills.json on push to main ──────
+  update-data:
+    name: Regenerate skills.json
+    runs-on: ubuntu-latest
+    needs: validate
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
 
-      - name: Validate CLAUDE.md exists
-        run: |
-          if [ ! -f "CLAUDE.md" ]; then
-            echo "❌ CLAUDE.md is missing — required for Claude Code agent rules"
-            exit 1
-          fi
-          echo "✅ CLAUDE.md present"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-      - name: Validate llms.txt exists
-        run: |
-          if [ ! -f "llms.txt" ]; then
-            echo "❌ llms.txt is missing — required for AI crawler discoverability"
-            exit 1
-          fi
-          echo "✅ llms.txt present"
+      - name: Regenerate docs/js/skills.json
+        run: python3 scripts/generate_skills_json.py
+
+      - name: Commit updated skills.json
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: auto-regenerate docs/js/skills.json [skip ci]"
+          file_pattern: docs/js/skills.json
+
+  # ── Job 3: Deploy GitHub Pages ───────────────────────────────
+  deploy:
+    name: Deploy GitHub Pages
+    runs-on: ubuntu-latest
+    needs: update-data
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

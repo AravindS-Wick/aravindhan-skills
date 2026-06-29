@@ -1,0 +1,78 @@
+name: "🛠️ Request a New Skill"
+description: "Suggest a skill that Claude should have"
+title: "[Skill Request] "
+labels: ["skill-request", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for requesting a new skill! A great skill request has:
+        - A clear **trigger** (what you'd say to Claude to activate it)
+        - A specific **problem** it solves
+        - At least one **example usage**
+
+  - type: input
+    id: skill-name
+    attributes:
+      label: Skill Name
+      description: A short kebab-case name (e.g. `api-rate-limiter`, `git-cleanup`)
+      placeholder: my-skill-name
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - "🤖 Agent & Orchestration"
+        - "🔒 Security"
+        - "🌐 Web & Browser"
+        - "🎨 Design & UI"
+        - "📱 Mobile"
+        - "⚙️ Backend & DevOps"
+        - "📊 Product & Analytics"
+        - "🔀 PR & Git Workflow"
+        - "🔍 Research & Web"
+        - "🛠️ Dev Tools"
+    validations:
+      required: true
+
+  - type: textarea
+    id: trigger
+    attributes:
+      label: When would you trigger this skill?
+      description: What would you say to Claude to activate it? Include exact phrases.
+      placeholder: |
+        "Claude, analyze my API for rate limit issues"
+        "check if this endpoint will handle 10k requests/sec"
+        "rate limit this"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does it solve?
+      description: What currently takes too long or is painful without this skill?
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example usage
+      description: Show a before/after — what you say and what Claude should do
+      placeholder: |
+        **Me:** "Rate limit my FastAPI endpoints"
+        **Claude with skill:** [analyzes routes, adds slowapi middleware, sets sensible limits by route type, adds tests]
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission checklist
+      options:
+        - label: I searched existing skills and this doesn't exist yet
+          required: true
+        - label: This would be useful to more than just me
+          required: true
