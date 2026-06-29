@@ -1,0 +1,52 @@
+name: "🐛 Skill Not Working"
+description: "Report a skill that produces wrong or no output"
+title: "[Bug] skill-name — "
+labels: ["bug", "priority-2"]
+body:
+  - type: input
+    id: skill-name
+    attributes:
+      label: Skill name
+      placeholder: e.g. security-audit
+    validations:
+      required: true
+
+  - type: input
+    id: claude-version
+    attributes:
+      label: Claude version
+      placeholder: e.g. Claude 3.7 Sonnet, Claude 4 Opus
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What exactly did you say to Claude?
+      placeholder: |
+        1. Open Claude Code
+        2. Say: "use the security-audit skill on this file: ..."
+        3. Claude responded with...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Claude's full response, error messages, relevant code snippets
