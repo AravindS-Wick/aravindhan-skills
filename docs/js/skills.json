@@ -1,101 +1,83 @@
 {
   "meta": {
     "total": 153,
-    "generated": "2026-06-29",
+    "generated": "auto",
     "repo": "https://github.com/AravindS-Wick/aravindhan-skills"
   },
   "categories": {
     "agent": {
       "label": "Agent & Orchestration",
-      "icon": "\ud83e\udd16",
+      "icon": "🤖",
       "color": "#6366f1"
     },
     "security": {
       "label": "Security",
-      "icon": "\ud83d\udd12",
+      "icon": "🔒",
       "color": "#ef4444"
     },
     "web": {
       "label": "Web & Browser",
-      "icon": "\ud83c\udf10",
+      "icon": "🌐",
       "color": "#0ea5e9"
     },
     "design": {
       "label": "Design & UI",
-      "icon": "\ud83c\udfa8",
+      "icon": "🎨",
       "color": "#ec4899"
     },
     "mobile": {
       "label": "Mobile",
-      "icon": "\ud83d\udcf1",
+      "icon": "📱",
       "color": "#f59e0b"
     },
     "backend": {
       "label": "Backend & DevOps",
-      "icon": "\u2699\ufe0f",
+      "icon": "⚙️",
       "color": "#10b981"
     },
     "product": {
       "label": "Product & Analytics",
-      "icon": "\ud83d\udcca",
+      "icon": "📊",
       "color": "#8b5cf6"
     },
     "workflow": {
       "label": "PR & Git Workflow",
-      "icon": "\ud83d\udd00",
+      "icon": "🔀",
       "color": "#14b8a6"
     },
     "research": {
       "label": "Research & Web",
-      "icon": "\ud83d\udd0d",
+      "icon": "🔍",
       "color": "#f97316"
     },
     "devtools": {
       "label": "Dev Tools",
-      "icon": "\ud83d\udee0\ufe0f",
+      "icon": "🛠️",
       "color": "#a855f7"
     }
   },
   "skills": [
     {
       "name": "a11y",
-      "category": "web",
-      "keywords": [
-        "accessibility",
-        "WCAG",
-        "a11y",
-        "screen reader"
-      ],
-      "description": "WCAG 2.2 Level AA accessibility review and fix.",
-      "install": "./install.sh  # then use 'a11y' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Review and fix accessibility issues (WCAG 2.2 Level AA). Use when the user asks for an accessibility review, runs /a11y, or wants to fix a11y issues in UI components, forms, or pages.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/a11y"
     },
     {
       "name": "a11y-debugging",
-      "category": "web",
-      "keywords": [
-        "accessibility debug",
-        "ARIA",
-        "focus",
-        "contrast"
-      ],
-      "description": "Chrome DevTools MCP accessibility debugging.",
-      "install": "./install.sh  # then use 'a11y-debugging' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Uses Chrome DevTools MCP for accessibility (a11y) debugging and auditing based on web.dev guidelines. Use when testing semantic HTML, ARIA labels, focus states, keyboard navigation, tap targets, and color contrast.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/a11y-debugging"
     },
     {
       "name": "accesslint-audit",
-      "category": "web",
-      "keywords": [
-        "a11y audit",
-        "accessibility audit",
-        "CDP",
-        "ARIA"
-      ],
-      "description": "Full a11y audit \u2014 report or fix modes, live DOM via Chrome DevTools Protocol.",
-      "install": "./install.sh  # then use 'accesslint-audit' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Find and fix WCAG 2.2 accessibility issues. Two modes — report (sweep a codebase or page, produce a prioritized written report, no edits) and fix (audit→edit→verify loop on a target). Prefers direct-CDP live-DOM auditing; falls back to a browser-MCP composition or HTML-string audits.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/accesslint-audit"
     },
@@ -104,59 +86,38 @@
       "category": "devtools",
       "keywords": [],
       "description": "Rewrite drafts or articles to optimize them for Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO). Rewrites H2 headings into explicit questions, inserts a 50-80 word answer capsule immediately under each, and ensures the content is optimized for AI extraction. Use when the user asks to AEO-optimize content, run /aeo-optimize, or prepare an article for AI citation.",
-      "install": "./install.sh  # then use 'aeo-optimization' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/aeo-optimization"
     },
     {
       "name": "agent-development",
-      "category": "agent",
-      "keywords": [
-        "autonomous agent",
-        "build agent",
-        "system prompt"
-      ],
-      "description": "Build autonomous agents \u2014 system prompts, tools, triggers, frontmatter, colors.",
-      "install": "./install.sh  # then use 'agent-development' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "This skill should be used when the user asks to \"create an agent\", \"add an agent\", \"write a subagent\", \"agent frontmatter\", \"when to use description\", \"agent examples\", \"agent tools\", \"agent colors\", \"autonomous agent\", or needs guidance on agent structure, system prompts, triggering conditions, or agent development best practices for Claude Code plugins.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/agent-development"
     },
     {
       "name": "agent-manager-skill",
-      "category": "agent",
-      "keywords": [
-        "tmux",
-        "manage agents",
-        "cli agents"
-      ],
-      "description": "Manage multiple local CLI agents via tmux sessions with cron-friendly scheduling.",
-      "install": "./install.sh  # then use 'agent-manager-skill' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Manage multiple local CLI agents via tmux sessions (start/stop/monitor/assign) with cron-friendly scheduling.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/agent-manager-skill"
     },
     {
       "name": "agent-memory-systems",
-      "category": "agent",
-      "keywords": [
-        "agent memory",
-        "cognitive",
-        "episodic memory"
-      ],
-      "description": "Cognitive architecture for agent memory \u2014 storage, retrieval, context compression.",
-      "install": "./install.sh  # then use 'agent-memory-systems' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "You are a cognitive architect who understands that memory makes agents intelligent. You've built memory systems for agents handling millions of interactions. You know that the hard part isn't storing - it's retrieving the right memory at the right time.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/agent-memory-systems"
     },
     {
       "name": "algorithmic-art",
-      "category": "design",
-      "keywords": [
-        "generative art",
-        "algorithmic",
-        "creative coding"
-      ],
-      "description": "Generative algorithms \u2014 philosophy, interactive HTML viewer, JS algorithm.",
-      "install": "./install.sh  # then use 'algorithmic-art' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Algorithmic philosophies are computational aesthetic movements that are then expressed through code. Output .md files (philosophy), .html files (interactive viewer), and .js files (generative algorithms).",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/algorithmic-art"
     },
@@ -165,7 +126,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Manage and execute tasks for aravindhan-ui.",
-      "install": "./install.sh  # then use 'aravindhan-ui' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/aravindhan-ui"
     },
@@ -174,7 +134,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Execution plan and roadmap tracker for the @aravi1008/ui design system.",
-      "install": "./install.sh  # then use 'aravindhan-ui-execution' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/aravindhan-ui-execution"
     },
@@ -183,7 +142,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Generate article and newsletter thumbnail candidates using the Gemini API. Analyzes article copy, constructs image prompts matching brand specs, calls the model, and evaluates candidates. Use when the user runs /article-thumbnails, asks to create a newsletter/article thumbnail, or wants image candidates for an article.",
-      "install": "./install.sh  # then use 'article-thumbnails' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/article-thumbnails"
     },
@@ -192,7 +150,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Manage and execute tasks for autodoc.",
-      "install": "./install.sh  # then use 'autodoc' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/autodoc"
     },
@@ -201,7 +158,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Convert a Controller action to an Autolyse gRPC service. Use when the user asks to convert a controller to Autolyse, create a gRPC service, or migrate an action to Autolyse.",
-      "install": "./install.sh  # then use 'autolyse-convert' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/autolyse-convert"
     },
@@ -210,7 +166,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Manage and execute tasks for autolyse-list.",
-      "install": "./install.sh  # then use 'autolyse-list' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/autolyse-list"
     },
@@ -219,34 +174,22 @@
       "category": "devtools",
       "keywords": [],
       "description": "Expert UI/UX design guidance for unique, accessible interfaces. Use for visual decisions, colors, typography, layouts. Always ask before making design decisions. Use this skill when the user asks to build web components, pages, or applications.",
-      "install": "./install.sh  # then use 'bencium-controlled-ux-designer' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/bencium-controlled-ux-designer"
     },
     {
       "name": "bencium-innovative-ux-designer",
-      "category": "design",
-      "keywords": [
-        "innovative UI",
-        "distinctive",
-        "creative frontend"
-      ],
-      "description": "Distinctive production-grade frontend \u2014 avoids generic AI aesthetics.",
-      "install": "./install.sh  # then use 'bencium-innovative-ux-designer' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/bencium-innovative-ux-designer"
     },
     {
       "name": "biz-analyst",
-      "category": "product",
-      "keywords": [
-        "KPI",
-        "ROI",
-        "business impact",
-        "metrics"
-      ],
-      "description": "KPIs, ROI calculation, business impact metrics, growth forecasting.",
-      "install": "./install.sh  # then use 'biz-analyst' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Manage and execute tasks for biz-analyst.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/biz-analyst"
     },
@@ -255,21 +198,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "Write copy following Sentry brand guidelines. Use when writing UI text, error messages, empty states, onboarding flows, 404 pages, documentation, marketing copy, or any user-facing content. Covers both Plain Speech (default) and Sentry Voice tones.",
-      "install": "./install.sh  # then use 'brand-guidelines' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/brand-guidelines"
     },
     {
       "name": "building-native-ui",
-      "category": "mobile",
-      "keywords": [
-        "Expo",
-        "React Native",
-        "native UI",
-        "Expo Router"
-      ],
-      "description": "Complete Expo Router guide \u2014 styling, navigation, animations, native tabs.",
-      "install": "./install.sh  # then use 'building-native-ui' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Complete guide for building beautiful apps with Expo Router. Covers fundamentals, styling, components, navigation, animations, patterns, and native tabs.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/building-native-ui"
     },
@@ -278,33 +214,22 @@
       "category": "devtools",
       "keywords": [],
       "description": "These are instructions for creating design philosophies - aesthetic movements that are then EXPRESSED VISUALLY. Output only .md files, .pdf files, and .png files.",
-      "install": "./install.sh  # then use 'canvas-design' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/canvas-design"
     },
     {
       "name": "chrome-devtools",
-      "category": "web",
-      "keywords": [
-        "DevTools",
-        "browser debug",
-        "performance"
-      ],
-      "description": "Chrome DevTools automation and debugging via MCP.",
-      "install": "./install.sh  # then use 'chrome-devtools' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Uses Chrome DevTools via MCP for efficient debugging, troubleshooting and browser automation. Use when debugging web pages, automating browser interactions, analyzing performance, or inspecting network requests. This skill does not apply to `--slim` mode (MCP configuration).",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/chrome-devtools"
     },
     {
       "name": "chrome-extensions",
-      "category": "web",
-      "keywords": [
-        "Chrome extension",
-        "Manifest V3",
-        "browser extension"
-      ],
-      "description": "Manifest V3 Chrome extension development with 10 reference doc sets.",
-      "install": "./install.sh  # then use 'chrome-extensions' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": ">",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/chrome-extensions"
     },
@@ -313,7 +238,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with AI-generated visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, website hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage. Uses ui-ux-pro-max, frontend-design, ai-artist, ai-multimodal skills.",
-      "install": "./install.sh  # then use 'ckm-banner-design' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/ckm-banner-design"
     },
@@ -322,21 +246,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides.",
-      "install": "./install.sh  # then use 'ckm-brand' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/ckm-brand"
     },
     {
       "name": "ckm-design",
-      "category": "design",
-      "keywords": [
-        "brand identity",
-        "logo",
-        "design tokens",
-        "CIP"
-      ],
-      "description": "Brand identity, design tokens, logo generation, corporate identity program.",
-      "install": "./install.sh  # then use 'ckm-design' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), social photos (HTML→screenshot, multi-platform). Actions: design logo, create CIP, generate mockups, build slides, design banner, generate icon, create social photos, social media images, brand identity, design system. Platforms: Facebook, Twitter, LinkedIn, YouTube, Instagram, Pinterest, TikTok, Threads, Google Ads.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/ckm-design"
     },
@@ -344,21 +261,15 @@
       "name": "ckm-design-system",
       "category": "devtools",
       "keywords": [],
-      "description": "Token architecture, component specifications, and slide generation. Three-layer tokens (primitive\u2192semantic\u2192component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations.",
-      "install": "./install.sh  # then use 'ckm-design-system' in Claude",
+      "description": "Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/ckm-design-system"
     },
     {
       "name": "ckm-slides",
-      "category": "design",
-      "keywords": [
-        "HTML presentation",
-        "slides",
-        "Chart.js"
-      ],
-      "description": "Strategic HTML presentations with Chart.js and design tokens.",
-      "install": "./install.sh  # then use 'ckm-slides' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/ckm-slides"
     },
@@ -367,7 +278,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components (dialogs, dropdowns, forms, tables), customizing themes and colors, implementing dark mode, generating visual designs and posters, or establishing consistent styling patterns across applications.",
-      "install": "./install.sh  # then use 'ckm-ui-styling' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/ckm-ui-styling"
     },
@@ -376,7 +286,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Build apps with the Claude API or Anthropic SDK. TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`/`claude_agent_sdk`, or user asks to use Claude API, Anthropic SDKs, or Agent SDK. DO NOT TRIGGER when: code imports `openai`/other AI SDK, general programming, or ML/data-science tasks.",
-      "install": "./install.sh  # then use 'claude-api' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/claude-api"
     },
@@ -385,7 +294,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "This skill provides guidance for creating sophisticated, interactive data visualisations using d3.js.",
-      "install": "./install.sh  # then use 'claude-d3js-skill' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/claude-d3js-skill"
     },
@@ -394,20 +302,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "Migrate prompts and code from Claude Sonnet 4.0, Sonnet 4.5, or Opus 4.1 to Opus 4.5. Use when the user wants to update their codebase, prompts, or API calls to use Opus 4.5. Handles model string updates and prompt adjustments for known Opus 4.5 behavioral differences. Does NOT migrate Haiku 4.5.",
-      "install": "./install.sh  # then use 'claude-opus-4-5-migration' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/claude-opus-4-5-migration"
     },
     {
       "name": "code-review",
       "category": "devtools",
-      "keywords": [
-        "review code",
-        "code quality",
-        "security review"
-      ],
-      "description": "Review code changes for correctness, security, performance, quality.",
-      "install": "./install.sh  # then use 'code-review' in Claude",
+      "keywords": [],
+      "description": "Review code changes for correctness, security, performance, and code quality. Use when the user asks to review a diff, review code changes, review commits, or perform a code review. Input can be: (1) a text diff pasted directly, (2) one or more git commit hashes to extract the diff from, or (3) a git range like abc123..def456. The user may also provide task description or requirements that motivated the change.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/code-review"
     },
@@ -416,7 +318,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Takes recently modified or complex code blocks and refactors them for readability and simplicity without changing behavioral logic. Use when refactoring complex logic, cleaning up nested conditions, or simplifying code structure.",
-      "install": "./install.sh  # then use 'code-simplifier' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/code-simplifier"
     },
@@ -425,55 +326,47 @@
       "category": "devtools",
       "keywords": [],
       "description": "Look up CODEOWNERS information and use batch/owners. Use when the user asks who owns a file, which team to ping, what Slack channel to use for a file or feature, what reviewers to add to a PR, or for any batch/owners command (show, summarize, export report, change, sort, check).",
-      "install": "./install.sh  # then use 'codeowners' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/codeowners"
     },
     {
       "name": "command-development",
       "category": "devtools",
-      "keywords": [
-        "slash command",
-        "create command",
-        "YAML frontmatter"
-      ],
-      "description": "Create slash commands with YAML frontmatter and dynamic arguments.",
-      "install": "./install.sh  # then use 'command-development' in Claude",
+      "keywords": [],
+      "description": "This skill should be used when the user asks to \"create a slash command\", \"add a command\", \"write a custom command\", \"define command arguments\", \"use command frontmatter\", \"organize commands\", \"create command with file references\", \"interactive command\", \"use AskUserQuestion in command\", or needs guidance on slash command structure, YAML frontmatter fields, dynamic arguments, bash execution in commands, user interaction patterns, or command development best practices for Claude Code.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/command-development"
     },
     {
       "name": "commit",
-      "category": "workflow",
-      "keywords": [
-        "conventional commit",
-        "git commit",
-        "commit message"
-      ],
-      "description": "Conventional commit format with issue references \u2014 always use this.",
-      "install": "./install.sh  # then use 'commit' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "ALWAYS use this skill when committing code changes — never commit directly without it. Creates commits following Sentry conventions with proper conventional commit format and issue references. Trigger on any commit, git commit, save changes, or commit message task.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/commit"
     },
     {
       "name": "composio",
       "category": "devtools",
-      "keywords": [],
+      "keywords": [
+        "composio",
+        "tool-router",
+        "agents",
+        "mcp",
+        "tools",
+        "api",
+        "automation",
+        "cli"
+      ],
       "description": "Use 1000+ external apps via Composio - either directly through the CLI or by building AI agents and apps with the SDK",
-      "install": "./install.sh  # then use 'composio' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/composio"
     },
     {
       "name": "comprehensive-review",
-      "category": "agent",
-      "keywords": [
-        "parallel review",
-        "multi-agent",
-        "code review"
-      ],
-      "description": "Parallel specialized subagents for multi-angle code review.",
-      "install": "./install.sh  # then use 'comprehensive-review' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Comprehensive code review using parallel specialized subagents. If a PR URL is provided, fetches PR details and can post comments. If no PR is provided, reviews the diff between the current branch and its base branch plus any uncommitted changes. CRITICAL: this skill is costly, don't use it unless user explicitly requested to use it.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/comprehensive-review"
     },
@@ -482,7 +375,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Optimize session memory and filter out shell command output clutter. Keeps a running log of the current session state (active files, current tasks, and progress) in the workspace to allow quick recovery and prevent token bloat. Use when the user runs /context-mode or asks to clean up active memory, log the current session state, or reduce session sluggishness.",
-      "install": "./install.sh  # then use 'context-mode' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/context-mode"
     },
@@ -491,33 +383,22 @@
       "category": "devtools",
       "keywords": [],
       "description": "Create a new IPD (In-Product Discovery) attribute provider hook for targeting in the Recommendations widget. Use when the user wants to add new attributes to IPD, add targeting data to the recommendations widget, create a new useIPDAttributes provider, or mentions IPD attributes.",
-      "install": "./install.sh  # then use 'create-global-ipd-attribute' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/create-global-ipd-attribute"
     },
     {
       "name": "cross-review",
-      "category": "agent",
-      "keywords": [
-        "cross review",
-        "opus review",
-        "model review"
-      ],
-      "description": "Code review by a user-specified model (e.g. review with opus).",
-      "install": "./install.sh  # then use 'cross-review' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Cross review code using a subagent with a specified model. Use when the user asks to review code changes AND specifies a model to use (e.g., 'review with opus', 'use sonnet to review', 'review changes with gemini'). The key differentiator from the regular code-review skill is that the user explicitly specifies which model should perform the review. The root agent reconstructs what changed from its own conversation history — no git commands are used.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/cross-review"
     },
     {
       "name": "deploy-to-vercel",
-      "category": "backend",
-      "keywords": [
-        "Vercel",
-        "deploy",
-        "preview deployment"
-      ],
-      "description": "Deploy apps and websites to Vercel \u2014 preview and production.",
-      "install": "./install.sh  # then use 'deploy-to-vercel' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Deploy applications and websites to Vercel. Use when the user requests deployment actions like \"deploy my app\", \"deploy and give me the link\", \"push this live\", or \"create a preview deployment\".",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/deploy-to-vercel"
     },
@@ -526,7 +407,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Create a new internal, experimental dev user account in the local Mailchimp dev environment. Automatically marks the account as internal and experimental (Optimizely). Asks for marketing plan, manual activation, feature flags, and account link interactively one at a time. Use when the user says \"create a dev account\", \"create a test user\", \"spin up a dev user\", or runs /dev-account-create.",
-      "install": "./install.sh  # then use 'dev-account-create' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/dev-account-create"
     },
@@ -535,7 +415,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Manage and execute tasks for dev-assistant.",
-      "install": "./install.sh  # then use 'dev-assistant' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/dev-assistant"
     },
@@ -544,16 +423,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "This skill provides a structured workflow for guiding users through collaborative document creation. Act as an active guide, walking users through three stages: Context Gathering, Refinement & Structure, and Reader Testing.",
-      "install": "./install.sh  # then use 'doc-coauthoring' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/doc-coauthoring"
     },
     {
       "name": "e2e-testing",
-      "category": "devtools",
+      "category": "granular-workflow-bundle",
       "keywords": [],
       "description": "End-to-end testing workflow with Playwright for browser automation, visual regression, cross-browser testing, and CI/CD integration.",
-      "install": "./install.sh  # then use 'e2e-testing' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/e2e-testing"
     },
@@ -562,49 +439,30 @@
       "category": "devtools",
       "keywords": [],
       "description": "Read and triage the user's Gmail inbox using Gmail automation tools. Pulls emails from a recent window (e.g. past 8 hours), filters out notifications/receipts/newsletters, and presents a list of emails requiring action or reply. Use when the user runs /email-tasks, asks to check their emails, or wants a summary of pending email tasks.",
-      "install": "./install.sh  # then use 'email-tasks' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/email-tasks"
     },
     {
       "name": "expo-tailwind-setup",
-      "category": "mobile",
-      "keywords": [
-        "Tailwind",
-        "Expo",
-        "NativeWind",
-        "react-native-css"
-      ],
-      "description": "Tailwind CSS v4 in Expo with react-native-css and NativeWind v5.",
-      "install": "./install.sh  # then use 'expo-tailwind-setup' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Set up Tailwind CSS v4 in Expo with react-native-css and NativeWind v5 for universal styling",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/expo-tailwind-setup"
     },
     {
       "name": "expo-ui-jetpack-compose",
-      "category": "mobile",
-      "keywords": [
-        "Jetpack Compose",
-        "Expo",
-        "Android",
-        "@expo/ui"
-      ],
-      "description": "@expo/ui/jetpack-compose \u2014 Jetpack Compose Views in Expo apps.",
-      "install": "./install.sh  # then use 'expo-ui-jetpack-compose' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "`@expo/ui/jetpack-compose` package lets you use Jetpack Compose Views and modifiers in your app.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/expo-ui-jetpack-compose"
     },
     {
       "name": "expo-ui-swift-ui",
-      "category": "mobile",
-      "keywords": [
-        "SwiftUI",
-        "Expo",
-        "@expo/ui",
-        "iOS"
-      ],
-      "description": "@expo/ui/swift-ui \u2014 SwiftUI Views and modifiers in Expo apps.",
-      "install": "./install.sh  # then use 'expo-ui-swift-ui' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "`@expo/ui/swift-ui` package lets you use SwiftUI Views and modifiers in your app.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/expo-ui-swift-ui"
     },
@@ -613,21 +471,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
-      "install": "./install.sh  # then use 'find-skills' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/find-skills"
     },
     {
       "name": "firecrawl",
-      "category": "research",
-      "keywords": [
-        "web scraping",
-        "scrape",
-        "crawl",
-        "search web"
-      ],
-      "description": "Web scraping, search, crawling, page interaction via Firecrawl CLI.",
-      "install": "./install.sh  # then use 'firecrawl' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Manage and execute tasks for firecrawl.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/firecrawl"
     },
@@ -636,7 +487,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Manage and execute tasks for firecrawl-agent.",
-      "install": "./install.sh  # then use 'firecrawl-agent' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/firecrawl-agent"
     },
@@ -645,7 +495,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Manage and execute tasks for firecrawl-browser.",
-      "install": "./install.sh  # then use 'firecrawl-browser' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/firecrawl-browser"
     },
@@ -654,7 +503,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Manage and execute tasks for firecrawl-crawl.",
-      "install": "./install.sh  # then use 'firecrawl-crawl' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/firecrawl-crawl"
     },
@@ -663,7 +511,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Manage and execute tasks for firecrawl-download.",
-      "install": "./install.sh  # then use 'firecrawl-download' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/firecrawl-download"
     },
@@ -672,33 +519,22 @@
       "category": "devtools",
       "keywords": [],
       "description": "Manage and execute tasks for firecrawl-map.",
-      "install": "./install.sh  # then use 'firecrawl-map' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/firecrawl-map"
     },
     {
       "name": "firecrawl-scrape",
-      "category": "research",
-      "keywords": [
-        "scrape URL",
-        "markdown",
-        "JS-rendered"
-      ],
-      "description": "Clean markdown from any URL including JS-rendered SPAs.",
-      "install": "./install.sh  # then use 'firecrawl-scrape' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Manage and execute tasks for firecrawl-scrape.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/firecrawl-scrape"
     },
     {
       "name": "firecrawl-search",
-      "category": "research",
-      "keywords": [
-        "web search",
-        "full page content",
-        "search"
-      ],
-      "description": "Web search with full page content extraction.",
-      "install": "./install.sh  # then use 'firecrawl-search' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Manage and execute tasks for firecrawl-search.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/firecrawl-search"
     },
@@ -707,7 +543,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Clean flag references from code and make behavior permanent. Use when the user asks to clean a feature flag from code, remove flag checks, or make flag behavior permanent.",
-      "install": "./install.sh  # then use 'flag-clean' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/flag-clean"
     },
@@ -716,7 +551,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Create new Mailchimp feature flag and PR. Use when the user asks to create a feature flag, add a new flag, or define a flag in config/flags.ini.",
-      "install": "./install.sh  # then use 'flag-create' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/flag-create"
     },
@@ -725,7 +559,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Delete flag definition from config/flags.ini after code references are removed. Use when the user asks to delete a flag definition or remove a flag from config.",
-      "install": "./install.sh  # then use 'flag-delete' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/flag-delete"
     },
@@ -734,34 +567,22 @@
       "category": "devtools",
       "keywords": [],
       "description": "Change an existing feature flag's percentage rollout. Use when the user asks to ramp a flag, change rollout percentage, or update enabled/enabled_e2e.",
-      "install": "./install.sh  # then use 'flag-ramp' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/flag-ramp"
     },
     {
       "name": "frontend-design",
-      "category": "design",
-      "keywords": [
-        "frontend",
-        "designer",
-        "component design"
-      ],
-      "description": "Frontend designer-engineer patterns \u2014 not a layout generator.",
-      "install": "./install.sh  # then use 'frontend-design' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "You are a frontend designer-engineer, not a layout generator.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/frontend-design"
     },
     {
       "name": "frontend-slides",
-      "category": "design",
-      "keywords": [
-        "presentation",
-        "PPTX",
-        "animation",
-        "slides"
-      ],
-      "description": "Animation-rich HTML presentations from scratch or converted PPTX.",
-      "install": "./install.sh  # then use 'frontend-slides' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files. Use when the user wants to build a presentation, convert a PPT/PPTX to web, or create slides for a talk/pitch. Helps non-designers discover their aesthetic through visual exploration rather than abstract choices.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/frontend-slides"
     },
@@ -770,7 +591,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "The Gemini API provides access to Google's most advanced AI models. Key capabilities include:",
-      "install": "./install.sh  # then use 'gemini-api-dev' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/gemini-api-dev"
     },
@@ -779,7 +599,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Use when integrating Google Gemini API into projects. Covers model selection, multimodal inputs, streaming, function calling, and production best practices.",
-      "install": "./install.sh  # then use 'gemini-api-integration' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/gemini-api-integration"
     },
@@ -788,35 +607,22 @@
       "category": "devtools",
       "keywords": [],
       "description": "Generate a new Mailchimp transactional email template set (HTML, txt, metadata). Use when the user asks to generate a transactional email, create an email template, or add a trx email.",
-      "install": "./install.sh  # then use 'generate-mc-trx-email' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/generate-mc-trx-email"
     },
     {
       "name": "global-security",
-      "category": "security",
-      "keywords": [
-        "pre-commit",
-        "secrets",
-        "vulnerable deps"
-      ],
-      "description": "Pre-commit gate: linting, secrets, vulnerable deps, bad branch names.",
-      "install": "./install.sh  # then use 'global-security' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Manage and execute tasks for global-security.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/global-security"
     },
     {
       "name": "global-tester",
-      "category": "backend",
-      "keywords": [
-        "Jest",
-        "pytest",
-        "vitest",
-        "ESLint",
-        "test runner"
-      ],
-      "description": "Run Jest, ESLint, pytest, vitest, stylelint, build, TypeScript checks.",
-      "install": "./install.sh  # then use 'global-tester' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Manage and execute tasks for global-tester.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/global-tester"
     },
@@ -825,7 +631,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Expert capability for robust, stealthy, and efficient browser automation using Playwright Go.",
-      "install": "./install.sh  # then use 'go-playwright' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/go-playwright"
     },
@@ -834,7 +639,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get grilled on their design, or mentions \"grill me\".",
-      "install": "./install.sh  # then use 'grill-me' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/grill-me"
     },
@@ -843,21 +647,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "Forces grounding using live documentation (Redis, Postgres, external API docs, frameworks) fetched via curl or web search before generating integration code or database schemas.",
-      "install": "./install.sh  # then use 'grill-with-docs' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/grill-with-docs"
     },
     {
       "name": "hook-development",
       "category": "devtools",
-      "keywords": [
-        "hooks",
-        "PreToolUse",
-        "PostToolUse",
-        "Stop hook"
-      ],
-      "description": "Create Claude Code hooks (PreToolUse, PostToolUse, Stop, etc.).",
-      "install": "./install.sh  # then use 'hook-development' in Claude",
+      "keywords": [],
+      "description": "This skill should be used when the user asks to \"create a hook\", \"add a PreToolUse/PostToolUse/Stop hook\", \"validate tool use\", \"implement prompt-based hooks\", \"use ${CLAUDE_PLUGIN_ROOT}\", \"set up event-driven automation\", \"block dangerous commands\", or mentions hook events (PreToolUse, PostToolUse, Stop, SubagentStop, SessionStart, SessionEnd, UserPromptSubmit, PreCompact, Notification). Provides comprehensive guidance for creating and implementing Claude Code plugin hooks with focus on advanced prompt-based hooks API.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/hook-development"
     },
@@ -866,7 +663,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Reorganizes backend codebases to enforce clean architectural patterns (Controllers, Services, Repositories/Data Access Objects) to reduce token bloat and maintain codebase longevity.",
-      "install": "./install.sh  # then use 'improve-codebase-architecture' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/improve-codebase-architecture"
     },
@@ -875,7 +671,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Use when the user asks to initialize a repo, create AGENTS.md, generate contributor guidelines, or set up agent-oriented documentation for a codebase.",
-      "install": "./install.sh  # then use 'init' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/init"
     },
@@ -884,7 +679,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Download high-resolution images, carousels, or reels from Instagram URLs using the agent-browser CLI. Stitches carousel slides into a single PDF if requested. Use when the user runs /instagram-downloader or asks to download/extract media from an Instagram URL.",
-      "install": "./install.sh  # then use 'instagram-downloader' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/instagram-downloader"
     },
@@ -893,7 +687,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Write internal communications such as status reports, leadership updates, 3P updates, newsletters, FAQs, incident reports, and project updates using repeatable internal formats.",
-      "install": "./install.sh  # then use 'internal-comms' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/internal-comms"
     },
@@ -902,20 +695,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "Manage and execute tasks for jira-transition.",
-      "install": "./install.sh  # then use 'jira-transition' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/jira-transition"
     },
     {
       "name": "last30days",
-      "category": "research",
-      "keywords": [
-        "Reddit opinions",
-        "X opinions",
-        "trend research"
-      ],
-      "description": "Aggregate Reddit, X, and web opinions on any topic from past 30 days.",
-      "install": "./install.sh  # then use 'last30days' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Search Reddit, X (Twitter), and the web for any topic, tool, or trend over the past 30 days and aggregate a report on user consensus, disagreements, and common pain points. Use when the user runs /last30days, asks for recent opinions on a tool or trend, or wants to check what people are saying about a topic lately.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/last30days"
     },
@@ -924,7 +711,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Generate Privacy Policies, Terms of Service, and other legal documents with 7-level verification.",
-      "install": "./install.sh  # then use 'legal-docs-generator' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/legal-docs-generator"
     },
@@ -933,20 +719,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "Manage and execute tasks for lite-superpowers.",
-      "install": "./install.sh  # then use 'lite-superpowers' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/lite-superpowers"
     },
     {
       "name": "market-researcher",
-      "category": "product",
-      "keywords": [
-        "competitor analysis",
-        "market research",
-        "trends"
-      ],
-      "description": "Competitor analysis, trend research, feature validation, gap identification.",
-      "install": "./install.sh  # then use 'market-researcher' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Manage and execute tasks for market-researcher.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/market-researcher"
     },
@@ -955,75 +735,46 @@
       "category": "devtools",
       "keywords": [],
       "description": "Manage and execute tasks for marketing-strategist.",
-      "install": "./install.sh  # then use 'marketing-strategist' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/marketing-strategist"
     },
     {
       "name": "mcp-builder",
-      "category": "backend",
-      "keywords": [
-        "MCP server",
-        "build MCP",
-        "tool server"
-      ],
-      "description": "Create MCP servers for LLM-to-external-service integration.",
-      "install": "./install.sh  # then use 'mcp-builder' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Create MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. The quality of an MCP server is measured by how well it enables LLMs to accomplish real-world tasks.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/mcp-builder"
     },
     {
       "name": "mcp-integration",
-      "category": "backend",
-      "keywords": [
-        "MCP",
-        "Model Context Protocol",
-        "plugin"
-      ],
-      "description": "Integrate Model Context Protocol servers into Claude Code plugins.",
-      "install": "./install.sh  # then use 'mcp-integration' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "This skill should be used when the user asks to \"add MCP server\", \"integrate MCP\", \"configure MCP in plugin\", \"use .mcp.json\", \"set up Model Context Protocol\", \"connect external service\", mentions \"${CLAUDE_PLUGIN_ROOT} with MCP\", or discusses MCP server types (SSE, stdio, HTTP, WebSocket). Provides comprehensive guidance for integrating Model Context Protocol servers into Claude Code plugins for external tool and service integration.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/mcp-integration"
     },
     {
       "name": "merge-all-features",
-      "category": "agent",
-      "keywords": [
-        "multi-repo",
-        "PR",
-        "parallel agents",
-        "shipping"
-      ],
-      "description": "End-to-end multi-repo PR shipping with parallel per-repo agents, ESLint+Jest gates, clean commits, and AI self-review.",
-      "install": "./install.sh  # then use 'merge-all-features' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "End-to-end multi-repo feature shipping. Use whenever the user invokes \"/merge-all-features\" or asks to commit, push, and raise PRs across one or many repos at once. Splits a target folder into independent repos, groups uncommitted changes feature-by-feature, runs ESLint + Jest gates before every commit, commits in dependency order with clean messages (NO co-author trailers), pushes, opens PRs with full descriptions (purpose, file changes, work done, use cases, splatter zone / blast radius, new imports, feature flags, required reviewers, test + lint results), then self-reviews and posts the review on the PR with required actions. Works on a single repo, a folder of repos, or the current directory if it is itself a repo. Spawns parallel subagents (one per repo) on cheap/default models so independent repos progress concurrently. If one repo is blocked, surfaces the blocker to the user in **bold** and keeps going on the others.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/merge-all-features"
     },
     {
       "name": "morning-intelligence",
-      "category": "research",
-      "keywords": [
-        "daily briefing",
-        "morning report",
-        "news"
-      ],
-      "description": "Personalized daily briefing based on role and news sources.",
-      "install": "./install.sh  # then use 'morning-intelligence' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Generate a personalized daily morning briefing based on your professional role, focus areas, and preferred news sources. Use when the user runs /morning-intelligence, asks for their daily brief, or sets up a scheduled briefing routine.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/morning-intelligence"
     },
     {
       "name": "native-data-fetching",
-      "category": "mobile",
-      "keywords": [
-        "React Query",
-        "SWR",
-        "fetch",
-        "offline",
-        "Expo Router"
-      ],
-      "description": "Network requests, React Query, SWR, Expo Router loaders, offline support.",
-      "install": "./install.sh  # then use 'native-data-fetching' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Use when implementing or debugging ANY network request, API call, or data fetching. Covers fetch API, React Query, SWR, error handling, caching, offline support, and Expo Router data loaders (`useLoaderData`).",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/native-data-fetching"
     },
@@ -1032,7 +783,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Automate NotebookLM actions using the agent-browser CLI. Supports creating notebooks, uploading sources (links, documents), and generating mindmaps or audio summaries. Use when the user runs /notebooklm, asks to automate NotebookLM, or wants to create audio summaries/study guides.",
-      "install": "./install.sh  # then use 'notebooklm-connector' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/notebooklm-connector"
     },
@@ -1041,7 +791,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Humanize AI-generated text or drafts. Strips out machine-writing patterns (e.g. em-dashes, \"let's dive in\" hooks, rules of three, buzzwords) and adds human writing patterns (varying sentence lengths, personal opinions, specific concrete details, and conversational asides). Use when the user runs /humanize, asks to make text sound like a human wrote it, or wants to rewrite generic AI copy.",
-      "install": "./install.sh  # then use 'notes-humanizer' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/notes-humanizer"
     },
@@ -1050,20 +799,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "Create new Mailchimp A/B experiment (Optimizely) with class and registration. Use when the user asks to create an Optimizely experiment, A/B test, or experiment class.",
-      "install": "./install.sh  # then use 'optimizely-create' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/optimizely-create"
     },
     {
       "name": "orchestrate",
-      "category": "agent",
-      "keywords": [
-        "sprint",
-        "orchestrate",
-        "route skills"
-      ],
-      "description": "Sprint orchestrator that auto-routes to the right skill per development phase.",
-      "install": "./install.sh  # then use 'orchestrate' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Manage and execute tasks for orchestrate.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/orchestrate"
     },
@@ -1071,8 +814,7 @@
       "name": "pageready-marker-add",
       "category": "devtools",
       "keywords": [],
-      "description": "Place the markPageReadyEnd() performance marker at the \"content ready\" point in a React component \u2014 i.e. after data has loaded and meaningful content is rendered, not on first paint/mount. Use when the user asks to add a PageReady marker, review an existing markPageReadyEnd placement, or ensure a marker fires at content-ready rather than shell-ready.",
-      "install": "./install.sh  # then use 'pageready-marker-add' in Claude",
+      "description": "Place the markPageReadyEnd() performance marker at the \"content ready\" point in a React component — i.e. after data has loaded and meaningful content is rendered, not on first paint/mount. Use when the user asks to add a PageReady marker, review an existing markPageReadyEnd placement, or ensure a marker fires at content-ready rather than shell-ready.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/pageready-marker-add"
     },
@@ -1081,21 +823,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "Planning agent for task breakdown and implementation planning. Use via spawn_subagent with skill='plan' when you need to explore a codebase and design an implementation approach before writing code.",
-      "install": "./install.sh  # then use 'plan' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/plan"
     },
     {
       "name": "planetscale",
-      "category": "backend",
-      "keywords": [
-        "database",
-        "schema branching",
-        "MySQL",
-        "N+1"
-      ],
-      "description": "Schema branching, indexing, N+1 prevention, safe online migrations.",
-      "install": "./install.sh  # then use 'planetscale' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Database schema branching, indexing, N+1 query prevention, query plans, and safe online migrations for MySQL/PostgreSQL databases. Use when working on database schemas, migrations, or query optimization.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/planetscale"
     },
@@ -1104,7 +839,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Work like Manus: Use persistent markdown files as your \\\"working memory on disk.\\",
-      "install": "./install.sh  # then use 'planning-with-files' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/planning-with-files"
     },
@@ -1113,21 +847,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "Browser automation with Playwright. Use when the user asks to test a website, take screenshots, check responsive design, test login flows, fill forms, check broken links, or automate any browser task.",
-      "install": "./install.sh  # then use 'playwright' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/playwright"
     },
     {
       "name": "playwright-skill",
-      "category": "web",
-      "keywords": [
-        "playwright",
-        "screenshots",
-        "browser test",
-        "e2e"
-      ],
-      "description": "Browser automation: screenshots, responsive testing, form automation.",
-      "install": "./install.sh  # then use 'playwright-skill' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "IMPORTANT - Path Resolution: This skill can be installed in different locations (plugin system, manual installation, global, or project-specific). Before executing any commands, determine the skill directory based on where you loaded this SKILL.md file, and use that path in all commands below.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/playwright-skill"
     },
@@ -1136,7 +863,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "This skill should be used when the user asks about \"plugin settings\", \"store plugin configuration\", \"user-configurable plugin\", \".local.md files\", \"plugin state files\", \"read YAML frontmatter\", \"per-project plugin settings\", or wants to make plugin behavior configurable. Documents the .claude/plugin-name.local.md pattern for storing plugin-specific configuration with YAML frontmatter and markdown content.",
-      "install": "./install.sh  # then use 'plugin-settings' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/plugin-settings"
     },
@@ -1145,34 +871,22 @@
       "category": "devtools",
       "keywords": [],
       "description": "This skill should be used when the user asks to \"create a plugin\", \"scaffold a plugin\", \"understand plugin structure\", \"organize plugin components\", \"set up plugin.json\", \"use ${CLAUDE_PLUGIN_ROOT}\", \"add commands/agents/skills/hooks\", \"configure auto-discovery\", or needs guidance on plugin directory layout, manifest configuration, component organization, file naming conventions, or Claude Code plugin architecture best practices.",
-      "install": "./install.sh  # then use 'plugin-structure' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/plugin-structure"
     },
     {
       "name": "po-guide",
-      "category": "product",
-      "keywords": [
-        "user stories",
-        "acceptance criteria",
-        "RICE",
-        "MoSCoW"
-      ],
-      "description": "User stories, acceptance criteria, RICE/MoSCoW prioritization.",
-      "install": "./install.sh  # then use 'po-guide' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Manage and execute tasks for po-guide.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/po-guide"
     },
     {
       "name": "pr-create-from-commits",
-      "category": "workflow",
-      "keywords": [
-        "create PR",
-        "pull request",
-        "Jira"
-      ],
-      "description": "Create PR from recent commits with Jira status and PR template.",
-      "install": "./install.sh  # then use 'pr-create-from-commits' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Create a PR from recent commits with Jira status and template. Use when the user asks to create a PR, open a pull request, or run pr-create-from-commits.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/pr-create-from-commits"
     },
@@ -1181,20 +895,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "Lists open GitHub pull requests filtered by a user-supplied list of author logins and review state (not draft, not fully approved). Supports per-repo gh pr list or cross-repo gh search prs plus optional reviewDecision post-check, and optional posting to a Slack channel or canvas. Use when the user runs /pr-list-by-author, asks for a daily PR queue, PRs waiting on review, team triage, or sharing that list to Slack across named repos or all visible repos on GitHub Enterprise or GitHub.com.",
-      "install": "./install.sh  # then use 'pr-list-by-author' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/pr-list-by-author"
     },
     {
       "name": "pr-monitor",
-      "category": "workflow",
-      "keywords": [
-        "CI checks",
-        "flaky test",
-        "PR monitor"
-      ],
-      "description": "Watch PR CI with flaky test detection and optional auto-rerun.",
-      "install": "./install.sh  # then use 'pr-monitor' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Monitor PR CI checks with intelligent flaky test detection and optional auto-rerun. Use when the user wants to watch a PR, detect flaky tests, or automatically rerun failed CI. Invoke with /pr-monitor to monitor current PR or /pr-monitor <pr-number> for specific PR.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/pr-monitor"
     },
@@ -1203,20 +911,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "Request a code review for a PR by finding the right Slack channel (from PR CODEOWNERS comment or capabilities.json), checking if a bot thread already exists in that channel, and bumping the thread or posting fresh. Use when the user runs /pr-request-review, asks to request a review, wants to ping a team for their PR, or says \"bump my PR\".",
-      "install": "./install.sh  # then use 'pr-request-review' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/pr-request-review"
     },
     {
       "name": "pr-review",
-      "category": "workflow",
-      "keywords": [
-        "review PR",
-        "code review",
-        "security check"
-      ],
-      "description": "Review PRs with code analysis, security checks, Playwright test discovery.",
-      "install": "./install.sh  # then use 'pr-review' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Review a PR with code analysis, security checks, and optional Playwright test discovery. Use when the user runs /pr-review, asks to review a PR or their changes, says \"look at this PR\", \"check my diff\", \"review before I push\", or wants feedback on code changes. Fetches PR via gh pr view; offers Playwright test check/create when running locally with Playwright repo.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/pr-review"
     },
@@ -1225,20 +927,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "Monitor a Slack channel for new PR review requests, perform code reviews scoped to team-owned files, post findings to Slack threads, and approve or comment. Requires --channel, --team, and --repo arguments. Designed to run on /loop.",
-      "install": "./install.sh  # then use 'pr-review-triage' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/pr-review-triage"
     },
     {
       "name": "pr-status",
-      "category": "workflow",
-      "keywords": [
-        "open PRs",
-        "merge readiness",
-        "CI status"
-      ],
-      "description": "List open PRs with merge readiness, CI status, approval state.",
-      "install": "./install.sh  # then use 'pr-status' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "List open PRs for the current repository with merge readiness classification (Ready to merge / Awaiting approval / Blocked), CI status, approval state, conflict detection, and rebase guidance. Use when the user runs /pr-status, asks to see their open PRs, wants to check merge readiness, or asks which PRs need attention.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/pr-status"
     },
@@ -1247,29 +943,28 @@
       "category": "devtools",
       "keywords": [],
       "description": "Manage and execute tasks for product-designer.",
-      "install": "./install.sh  # then use 'product-designer' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/product-designer"
     },
     {
       "name": "qa-automation",
       "category": "devtools",
-      "keywords": [
-        "E2E tests",
-        "Playwright tests",
-        "test automation"
-      ],
-      "description": "Playwright E2E tests, test strategy, WCAG audit, unit test stubs.",
-      "install": "./install.sh  # then use 'qa-automation' in Claude",
+      "keywords": [],
+      "description": "Manage and execute tasks for qa-automation.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/qa-automation"
     },
     {
       "name": "remotion-best-practices",
       "category": "devtools",
-      "keywords": [],
+      "keywords": [
+        "remotion",
+        "video",
+        "react",
+        "animation",
+        "composition"
+      ],
       "description": "Best practices for Remotion - Video creation in React",
-      "install": "./install.sh  # then use 'remotion-best-practices' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/remotion-best-practices"
     },
@@ -1278,61 +973,38 @@
       "category": "devtools",
       "keywords": [],
       "description": "Fast agent specialized for exploring codebases and searching for code patterns. Use via spawn_subagent with skill='research' for read-only exploration tasks.",
-      "install": "./install.sh  # then use 'research' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/research"
     },
     {
       "name": "security-audit",
-      "category": "security",
-      "keywords": [
-        "OWASP",
-        "XSS",
-        "SQLi",
-        "CSRF",
-        "JWT"
-      ],
-      "description": "OWASP Top 10, SQL injection, XSS, CSRF, JWT misuse, command injection.",
-      "install": "./install.sh  # then use 'security-audit' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Runs systematic audits for common web security vulnerabilities (OWASP Top 10, SQL injection, XSS, CSRF, insecure unserialization, command injection, and JWT misuse).",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/security-audit"
     },
     {
       "name": "security-cmdexe",
-      "category": "security",
-      "keywords": [
-        "PHP exec",
-        "shell_exec",
-        "command injection"
-      ],
-      "description": "Convert PHP exec/shell_exec to ShellBuilder pattern.",
-      "install": "./install.sh  # then use 'security-cmdexe' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Convert PHP exec, shell_exec, system, passthru, or backticks to the ShellBuilder pattern. Use when PHP code contains those builtins; follows .agent/rules/security-cmdexe.mdc.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/security-cmdexe"
     },
     {
       "name": "security-csrf",
-      "category": "security",
-      "keywords": [
-        "CSRF",
-        "controller",
-        "Autolyse"
-      ],
-      "description": "Apply CSRF protection to controller actions and Autolyse services.",
-      "install": "./install.sh  # then use 'security-csrf' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Apply CSRF protection to state-changing controller actions and Autolyse services. Use when generating Mailchimp controllers or registering Autolyse services; follows .agent/rules/security-csrf.mdc.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/security-csrf"
     },
     {
       "name": "security-sqli",
-      "category": "security",
-      "keywords": [
-        "SQL injection",
-        "prepared statements",
-        "database"
-      ],
-      "description": "SQL injection protection via prepared statements.",
-      "install": "./install.sh  # then use 'security-sqli' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Apply SQL injection protection using prepared statements for database queries. Use when generating or modifying code that uses exec, query, queryOne, querySql, etc.; follows .agent/rules/security-sqli.mdc.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/security-sqli"
     },
@@ -1341,75 +1013,46 @@
       "category": "devtools",
       "keywords": [],
       "description": "Prevent serialization vulnerabilities when using serialize, unserialize, or magic methods. Use when generating or editing PHP code with serialization; follows .agent/rules/security-unserialize.mdc.",
-      "install": "./install.sh  # then use 'security-unserialize' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/security-unserialize"
     },
     {
       "name": "security-xss",
-      "category": "security",
-      "keywords": [
-        "XSS",
-        "React",
-        "Avesta",
-        "views"
-      ],
-      "description": "XSS protection for Avesta and React views.",
-      "install": "./install.sh  # then use 'security-xss' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Apply XSS protection to Avesta views (app/views/) and React views (web/js/src/). Use when editing views or when end-user HTML must be rendered; follows .agent/rules/security-xss.mdc.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/security-xss"
     },
     {
       "name": "shannon",
       "category": "security",
-      "keywords": [
-        "pentest",
-        "security audit",
-        "exploit",
-        "vulnerability"
-      ],
-      "description": "Autonomous AI pentester \u2014 white-box assessment and real exploit execution.",
-      "install": "./install.sh  # then use 'shannon' in Claude",
+      "keywords": [],
+      "description": "Autonomous AI pentester for web apps and APIs. Run white-box security assessments with Shannon — analyzes source code, identifies attack vectors, and executes real exploits to prove vulnerabilities. Triggered by 'shannon', 'pentest', 'security audit', 'vuln scan'.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/shannon"
     },
     {
       "name": "skill-creator",
       "category": "devtools",
-      "keywords": [
-        "create skill",
-        "new skill",
-        "SKILL.md",
-        "frontmatter"
-      ],
-      "description": "Guide for creating effective skills \u2014 structure, frontmatter, disclosure.",
-      "install": "./install.sh  # then use 'skill-creator' in Claude",
+      "keywords": [],
+      "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/skill-creator"
     },
     {
       "name": "skill-development",
       "category": "devtools",
-      "keywords": [
-        "skill development",
-        "plugin skill",
-        "Claude Code skill"
-      ],
-      "description": "Full skill development workflow for Claude Code plugins.",
-      "install": "./install.sh  # then use 'skill-development' in Claude",
+      "keywords": [],
+      "description": "This skill should be used when the user wants to \"create a skill\", \"add a skill to plugin\", \"write a new skill\", \"improve skill description\", \"organize skill content\", or needs guidance on skill structure, progressive disclosure, or skill development best practices for Claude Code plugins.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/skill-development"
     },
     {
       "name": "skills-router",
-      "category": "agent",
-      "keywords": [
-        "auto-select skill",
-        "route",
-        "git context"
-      ],
-      "description": "Reads git context and message keywords to auto-load the correct skill.",
-      "install": "./install.sh  # then use 'skills-router' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Manage and execute tasks for skills-router.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/skills-router"
     },
@@ -1418,7 +1061,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "A toolkit providing utilities and knowledge for creating animated GIFs optimized for Slack.",
-      "install": "./install.sh  # then use 'slack-gif-creator' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/slack-gif-creator"
     },
@@ -1427,35 +1069,22 @@
       "category": "devtools",
       "keywords": [],
       "description": "Pre-push code review for SMS and SmsBulk changes. Checks feature flag wrapping, exposed/debug code, React bad practices, dangerous linter disabling, DRY violations, and MCDS CSS compliance. Scoped to web/js/src/Main/Sms and web/js/src/Main/SmsBulk. Use before pushing or creating a PR for any SMS-related frontend changes, or whenever the user says \"review my SMS changes\", \"check my SMS code\", or asks if their SMS/SmsBulk changes are ready to push.",
-      "install": "./install.sh  # then use 'sms-review' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/sms-review"
     },
     {
       "name": "spartan-ai-toolkit",
-      "category": "backend",
-      "keywords": [
-        "quality gate",
-        "typecheck",
-        "lint",
-        "test",
-        "build"
-      ],
-      "description": "Quality gates (typecheck \u2192 lint \u2192 test \u2192 build) before any agent code.",
-      "install": "./install.sh  # then use 'spartan-ai-toolkit' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Enforces quality gates (typecheck -> lint -> test -> build) and stack profiles (React, TypeScript, Go, Python) to prevent agent code degradation. Use when running build check, lint check, typecheck, or init rules.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/spartan-ai-toolkit"
     },
     {
       "name": "sprint-commander",
-      "category": "product",
-      "keywords": [
-        "sprint planning",
-        "velocity",
-        "retrospective"
-      ],
-      "description": "Sprint planning, velocity forecasting, retrospectives, dependency mapping.",
-      "install": "./install.sh  # then use 'sprint-commander' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Manage and execute tasks for sprint-commander.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/sprint-commander"
     },
@@ -1464,7 +1093,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Generate sprint summary for team standups with state changes and stagnant tickets. Use when the user runs /standup, asks for a standup report, or wants sprint summary for a JIRA board.",
-      "install": "./install.sh  # then use 'standup' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/standup"
     },
@@ -1473,7 +1101,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Create one or more dummy ecommerce stores with promo codes in the CWS dev environment. Prompts the user for store type(s), number of promo codes per store, user ID, and list ID, then executes the creation via docker exec into mc-dev-app. Use when the user wants to seed dev data for Shopify, Wix, Square, or WooCommerce stores.",
-      "install": "./install.sh  # then use 'store-create' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/store-create"
     },
@@ -1482,7 +1109,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Use when executing implementation plans with independent tasks in the current session",
-      "install": "./install.sh  # then use 'subagent-driven-development' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/subagent-driven-development"
     },
@@ -1491,7 +1117,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Scrape Substack Notes metrics for a specific author and time period. Uses agent-browser to load the page, scrolls to fetch all posts, extracts metrics (likes, comments, restacks), and formats them as a structured spreadsheet (.xlsx). Use when the user runs /substack-notes-scraper, asks to scrape/analyze Substack notes, or wants a metrics report on Substack posts.",
-      "install": "./install.sh  # then use 'substack-notes-scraper' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/substack-notes-scraper"
     },
@@ -1500,7 +1125,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Disable default sycophantic agreement and challenge the user's assumptions. Argues the strongest case against the user's proposal, highlights blind spots, and refuses to agree unless presented with strong evidence. Use when the user runs /sycophancy-buster or /criticize, asks for critical feedback on an idea, or wants a devil's advocate review.",
-      "install": "./install.sh  # then use 'sycophancy-buster' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/sycophancy-buster"
     },
@@ -1509,22 +1133,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
-      "install": "./install.sh  # then use 'systematic-debugging' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/systematic-debugging"
     },
     {
       "name": "tdd",
       "category": "devtools",
-      "keywords": [
-        "TDD",
-        "red-green-refactor",
-        "Jest",
-        "pytest",
-        "test first"
-      ],
-      "description": "TDD: enforces red-green-refactor in Jest, PyTest, JUnit, Vitest, Go.",
-      "install": "./install.sh  # then use 'tdd' in Claude",
+      "keywords": [],
+      "description": "Enforces writing failing tests (red-green-refactor loop) in Jest, PyTest, JUnit, Vitest, Go test, or RSpec before implementing or modifying backend logic.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/tdd"
     },
@@ -1533,34 +1149,22 @@
       "category": "devtools",
       "keywords": [],
       "description": "Replace with description of the skill and when Claude should use it.",
-      "install": "./install.sh  # then use 'template-skill' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/template-skill"
     },
     {
       "name": "terrashark",
-      "category": "security",
-      "keywords": [
-        "Terraform",
-        "OpenTofu",
-        "blast-radius",
-        "IaC"
-      ],
-      "description": "Terraform/OpenTofu safety \u2014 identity churn, secret exposure, blast-radius.",
-      "install": "./install.sh  # then use 'terrashark' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Prevent Terraform/OpenTofu hallucinations by diagnosing and fixing failure modes: identity churn, secret exposure, blast-radius mistakes, CI drift, and compliance gate gaps. Use when generating, reviewing, refactoring, or migrating IaC and when building delivery/testing pipelines.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/terrashark"
     },
     {
       "name": "theme-factory",
-      "category": "design",
-      "keywords": [
-        "theme",
-        "font pairing",
-        "color theme"
-      ],
-      "description": "Curated font + color theme collection \u2014 apply to any artifact.",
-      "install": "./install.sh  # then use 'theme-factory' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "This skill provides a curated collection of professional font and color themes themes, each with carefully selected color palettes and font pairings. Once a theme is chosen, it can be applied to any artifact.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/theme-factory"
     },
@@ -1569,7 +1173,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices. Use when user wants to convert a plan into issues, create implementation tickets, or break down work into issues.",
-      "install": "./install.sh  # then use 'to-issues' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/to-issues"
     },
@@ -1578,34 +1181,22 @@
       "category": "devtools",
       "keywords": [],
       "description": "Turn the current conversation context into a PRD and publish it to the project issue tracker. Use when user wants to create a PRD from the current context.",
-      "install": "./install.sh  # then use 'to-prd' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/to-prd"
     },
     {
       "name": "ui-ux-pro-max",
-      "category": "design",
-      "keywords": [
-        "UI design",
-        "UX",
-        "color palette",
-        "typography"
-      ],
-      "description": "Comprehensive design guide \u2014 color palettes, typography, responsive layouts.",
-      "install": "./install.sh  # then use 'ui-ux-pro-max' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Comprehensive design guide for web and mobile applications. Use when designing new UI components or pages, choosing color palettes and typography, or reviewing code for UX issues.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/ui-ux-pro-max"
     },
     {
       "name": "use-dom",
-      "category": "mobile",
-      "keywords": [
-        "DOM components",
-        "webview",
-        "Expo DOM"
-      ],
-      "description": "Expo DOM components \u2014 run web code in webview, incremental migration.",
-      "install": "./install.sh  # then use 'use-dom' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Use Expo DOM components to run web code in a webview on native and as-is on web. Migrate web code to native incrementally.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/use-dom"
     },
@@ -1614,7 +1205,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Vercel composition and routing design patterns for high-performance frontend applications.",
-      "install": "./install.sh  # then use 'vercel-composition-patterns' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/vercel-composition-patterns"
     },
@@ -1623,7 +1213,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
-      "install": "./install.sh  # then use 'vercel-react-best-practices' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/vercel-react-best-practices"
     },
@@ -1632,21 +1221,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "React Native and Expo deployment patterns on Vercel.",
-      "install": "./install.sh  # then use 'vercel-react-native-skills' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/vercel-react-native-skills"
     },
     {
       "name": "verify-endpoints",
-      "category": "web",
-      "keywords": [
-        "dev server",
-        "curl",
-        "endpoint validation",
-        "API test"
-      ],
-      "description": "Boot dev server, run curl validation, auto-debug failures.",
-      "install": "./install.sh  # then use 'verify-endpoints' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Boots a local dev server, listens to logs, runs curl/HTTP validation requests, checks status codes, and debugs failures automatically.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/verify-endpoints"
     },
@@ -1655,21 +1237,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "To build powerful frontend claude.ai artifacts, follow these steps:",
-      "install": "./install.sh  # then use 'web-artifacts-builder' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/web-artifacts-builder"
     },
     {
       "name": "web-asset-generator",
-      "category": "web",
-      "keywords": [
-        "favicon",
-        "PWA icons",
-        "Open Graph",
-        "social image"
-      ],
-      "description": "Favicons, PWA icons, Open Graph / social meta images.",
-      "install": "./install.sh  # then use 'web-asset-generator' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Generate web assets including favicons, app icons (PWA), and social media meta images (Open Graph) for Facebook, Twitter, WhatsApp, and LinkedIn. Use when users need icons, favicons, social sharing images, or Open Graph images from logos or text slogans. Handles image resizing, text-to-image generation, and provides proper HTML meta tags.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/web-asset-generator"
     },
@@ -1678,21 +1253,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "Review files for compliance with Web Interface Guidelines.",
-      "install": "./install.sh  # then use 'web-design-guidelines' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/web-design-guidelines"
     },
     {
       "name": "webapp-testing",
-      "category": "web",
-      "keywords": [
-        "playwright",
-        "Python",
-        "local test",
-        "web app test"
-      ],
-      "description": "Native Python Playwright scripts for local web app testing.",
-      "install": "./install.sh  # then use 'webapp-testing' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "To test local web applications, write native Python Playwright scripts.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/webapp-testing"
     },
@@ -1701,20 +1269,14 @@
       "category": "devtools",
       "keywords": [],
       "description": "Generate a weekly regression report for the Mailchimp monolith by querying Bugsnag (SmartBear MCP) for new errors and correlating them with recent releases and GitHub commits. Use when the user asks to check for performance degradation, find regressions, generate a weekly error report, or investigate what broke recently.",
-      "install": "./install.sh  # then use 'weekly-performance-regression-report' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/weekly-performance-regression-report"
     },
     {
       "name": "work-on",
-      "category": "workflow",
-      "keywords": [
-        "Jira ticket",
-        "work on issue",
-        "start task"
-      ],
-      "description": "Start working on a Jira ticket \u2014 context, branches, PRs.",
-      "install": "./install.sh  # then use 'work-on' in Claude",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Start working on a Jira ticket by gathering context (ticket details, branches, PRs) and offering actions. Use when the user runs /work-on, asks to work on a ticket, or wants Jira ticket context and branch/PR info.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/work-on"
     },
@@ -1723,7 +1285,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "This skill should be used when the user asks to \"create a hookify rule\", \"write a hook rule\", \"configure hookify\", \"add a hookify rule\", or needs guidance on hookify rule syntax and patterns.",
-      "install": "./install.sh  # then use 'writing-hookify-rules' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/writing-hookify-rules"
     },
@@ -1732,7 +1293,6 @@
       "category": "devtools",
       "keywords": [],
       "description": "Unless otherwise stated by the user or existing template",
-      "install": "./install.sh  # then use 'xlsx' in Claude",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/xlsx"
     }
