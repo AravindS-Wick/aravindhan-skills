@@ -1,6 +1,6 @@
 {
   "meta": {
-    "total": 153,
+    "total": 154,
     "generated": "auto",
     "repo": "https://github.com/AravindS-Wick/aravindhan-skills"
   },
@@ -681,6 +681,14 @@
       "description": "Download high-resolution images, carousels, or reels from Instagram URLs using the agent-browser CLI. Stitches carousel slides into a single PDF if requested. Use when the user runs /instagram-downloader or asks to download/extract media from an Instagram URL.",
       "tier": "core",
       "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/instagram-downloader"
+    },
+    {
+      "name": "interactive-pr-shipper",
+      "category": "devtools",
+      "keywords": [],
+      "description": "Fully customizable end-to-end PR shipping workflow with interactive checkbox options, saved user preferences, GitHub issue creation, AI PR reviews, test gates, and automated merging. Use when shipping features or invoking \"/ship-pr\".",
+      "tier": "core",
+      "github_url": "https://github.com/AravindS-Wick/aravindhan-skills/tree/main/skills/interactive-pr-shipper"
     },
     {
       "name": "internal-comms",
